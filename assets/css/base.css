@@ -1,1 +1,33 @@
-/*# sourceMappingURL=base.css.map */
+@charset "UTF-8";
+/* html 폰트 크기 */
+html {
+  font-size: 16px;
+}
+
+/* 변수 */
+/* 믹스인 */
+/* 함수 */
+@media screen and (max-width: 1023px) and (min-width: 769px) {
+  /* html 폰트 크기 */
+  html {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* html 폰트 크기 */
+  html {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 620px) {
+  /* html 폰트 크기 */
+  html {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* html 폰트 크기 */
+  html {
+    font-size: 16px;
+  }
+}/*# sourceMappingURL=base.css.map */
