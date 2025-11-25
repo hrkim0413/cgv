@@ -61,11 +61,31 @@ a {
 }
 
 .btn-round24 {
-  @include btn($br: 24px);
+  @include btn(24px);
 }
 
 .btn-round10 {
-  @include btn($br: 10px);
+  @include btn(10px);
+}
+
+.btn-sub {
+  display: block;
+  width: 100%;
+  padding: 18px 10px;
+  background: $color-main-lr;
+  border: 1px solid $color-main-lr;
+  border-radius: 12px;
+  color: $color-main-w;
+  font-size: $fs-nav;
+  text-align: center;
+
+  &:hover {
+    background: $color-main-r;
+  }
+}
+
+.main-title {
+  @include title1();
 }
 
 /* header */
@@ -284,6 +304,17 @@ footer {
     display: block !important;
   }
 
+  .btn-sub {
+    padding: 22px 10px;
+    border-radius: 12px;
+    font-size: mo-rem(32);
+  }
+
+  .main-title {
+    @include mo-title1();
+    text-align: center;
+  }
+
   /* header */
   header {
     .logo {
@@ -309,6 +340,10 @@ footer {
   // act
   header.act {
     &::after {
+      display: none;
+    }
+
+    .gnb .sub {
       display: none;
     }
   }

@@ -11,7 +11,7 @@
 - 메인                          index.php               > 혜련, 진영, 서현
 - 회원가입                      join.php                > 서현(퍼블), 혜련(php)
 - 로그인                        login.php               > 진영(퍼블), 혜련(php)
-- 장바구니                      cart.php                > 
+- 장바구니                      cart.php                > 혜련
 - 영화 예매                     reservation/index.php   > 
 - 극장 > 전체극장               theater/search.php      > 혜련
 - 영화 소개                     introduce/index.php     > 진영 or 서현, 혜련(js)
@@ -61,4 +61,4 @@
 
 # 작업내용
 - 11/25
-  1. 
+  1. 장바구니

@@ -121,6 +121,28 @@ a {
   color: #fff;
 }
 
+.btn-sub {
+  display: block;
+  width: 100%;
+  padding: 18px 10px;
+  background: #FC5555;
+  border: 1px solid #FC5555;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 1.375rem;
+  text-align: center;
+}
+.btn-sub:hover {
+  background: #ED0E02;
+}
+
+.main-title {
+  margin-bottom: 50px;
+  font-family: "Cafe24Surround", "NanumSquareRound", "Nanum Gothic", sans-serif;
+  font-size: 2.625rem;
+  font-weight: bold;
+}
+
 /* header */
 header {
   position: relative;
@@ -294,6 +316,18 @@ footer .sns img:hover {
   .mo-show {
     display: block !important;
   }
+  .btn-sub {
+    padding: 22px 10px;
+    border-radius: 12px;
+    font-size: 1rem;
+  }
+  .main-title {
+    margin-bottom: 1.875rem;
+    font-family: "Cafe24Surround", "NanumSquareRound", "Nanum Gothic", sans-serif;
+    font-size: 1.375rem;
+    font-weight: bold;
+    text-align: center;
+  }
   /* header */
   header .logo {
     width: 20.8333333333vw;
@@ -311,6 +345,9 @@ footer .sns img:hover {
     width: 100%;
   }
   header.act::after {
+    display: none;
+  }
+  header.act .gnb .sub {
     display: none;
   }
   nav {

@@ -23,7 +23,7 @@
   <?php include('./assets/inc/header.php');?>
 
   <!-- main -->
-  <main class="main">
+  <main id="main">
     <!-- 영화 예매 -->
     <section class="main-reservation" id="main-reservation">
       <div class="inner">

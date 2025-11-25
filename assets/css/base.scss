@@ -70,6 +70,10 @@ $fs-title2 : 2.125rem; // 34px
   @return #{calc($px / 768 * 100)}vw;
 }
 
+@function pc-vw($px) {
+  @return #{calc($px / 1400 * 100)}vw;
+}
+
 @media screen and (max-width: 1023px) and (min-width: 769px) {
 
   /* html 폰트 크기 */

@@ -31,14 +31,6 @@ html {
     font-size: 16px;
   }
 }
-/* common */
-.main .main-title {
-  margin-bottom: 50px;
-  font-family: "Cafe24Surround", "NanumSquareRound", "Nanum Gothic", sans-serif;
-  font-size: 2.625rem;
-  font-weight: bold;
-}
-
 /* 영화 예매 */
 /* 극장 */
 /* 영화 소개 */
@@ -286,14 +278,7 @@ html {
 }
 @media screen and (max-width: 768px) {
   /* 공통 */
-  .main .main-title {
-    margin-bottom: 1.875rem;
-    font-family: "Cafe24Surround", "NanumSquareRound", "Nanum Gothic", sans-serif;
-    font-size: 1.375rem;
-    font-weight: bold;
-    text-align: center;
-  }
-  .main .main-desc {
+  #main .main-desc {
     text-align: center;
   }
   /* 영화 소개 */
@@ -461,6 +446,7 @@ html {
   }
 }
 @media screen and (max-width: 620px) {
+  /* 액티비티 */
   .main-activity .small-box strong {
     top: 160px;
   }
@@ -469,6 +455,7 @@ html {
   }
 }
 @media screen and (max-width: 480px) {
+  /* 액티비티 */
   .main-activity .small-box strong {
     top: 140px;
   }

@@ -2,12 +2,6 @@
 
 @use 'base' as *;
 
-/* common */
-.main {
-  .main-title {
-    @include title1();
-  }
-}
 
 /* 영화 예매 */
 .main-reservation {
@@ -324,12 +318,7 @@
 @media screen and (max-width: 768px) {
 
   /* 공통 */
-  .main {
-    .main-title {
-      @include mo-title1();
-      text-align: center;
-    }
-
+  #main {
     .main-desc {
       text-align: center;
     }
@@ -538,21 +527,29 @@
 }
 
 @media screen and (max-width: 620px) {
-  .main-activity .small-box strong {
-    top: 160px;
-  }
 
-  .main-activity .small-box h3 {
-    top: 200px;
+  /* 액티비티 */
+  .main-activity {
+    .small-box strong {
+      top: 160px;
+    }
+
+    .small-box h3 {
+      top: 200px;
+    }
   }
 }
 
 @media screen and (max-width: 480px) {
-  .main-activity .small-box strong {
-    top: 140px;
-  }
 
-  .main-activity .small-box h3 {
-    top: 170px;
+  /* 액티비티 */
+  .main-activity {
+    .small-box strong {
+      top: 140px;
+    }
+
+    .small-box h3 {
+      top: 170px;
+    }
   }
 }
