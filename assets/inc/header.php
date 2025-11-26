@@ -56,7 +56,7 @@
     </nav>
 
     <ul class="top-menu">
-      <li class="pc-show"><a href="./login.php" title="로그인" class="btn btn-round24">로그인</a></li>
+      <li class="pc-show"><a href="./login.php" title="로그인" class="btn btn-hd-login">로그인</a></li>
       <li class="mo-show">
         <a href="./login.php" title="로그인">
           <img src="./assets/images/login-icon.png" alt="로그인">

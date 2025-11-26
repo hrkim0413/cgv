@@ -60,28 +60,12 @@ a {
   @include btn();
 }
 
-.btn-round24 {
-  @include btn(24px);
+.btn-line {
+  @include btn-line();
 }
 
-.btn-round10 {
-  @include btn(10px);
-}
-
-.btn-sub {
-  display: block;
-  width: 100%;
-  padding: 18px 10px;
-  background: $color-main-lr;
-  border: 1px solid $color-main-lr;
-  border-radius: 12px;
-  color: $color-main-w;
-  font-size: $fs-nav;
-  text-align: center;
-
-  &:hover {
-    background: $color-main-r;
-  }
+.btn2 {
+  @include btn2();
 }
 
 .main-title {
@@ -106,6 +90,19 @@ header {
 
     img {
       width: 100%;
+    }
+  }
+
+  .top-menu {
+    .btn-hd-login {
+      background: none;
+      border: 1px solid $color-main-bk;
+      color: $color-main-bk;
+
+      &:hover {
+        background: $color-main-bk;
+        color: $color-main-w;
+      }
     }
   }
 }

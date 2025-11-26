@@ -213,7 +213,7 @@
 
 /* 액티비티 */
 .main-activity {
-  background: linear-gradient(to bottom, #CF8DFB 0%, #B98EFC 40%, #9D91FF 100%);
+  background: $color-main-lg;
 
   .inner {
     display: flex;
@@ -223,7 +223,6 @@
 
   .main-title {
     width: 100%;
-    color: $color-main-w;
   }
 
   .big-box {
@@ -260,46 +259,27 @@
       }
     }
 
-    .btn-blue {
-      background: #2E80FB;
-      border-color: #2E80FB;
-      color: $color-main-w;
-
+    .btn-more {
       &::after {
         width: 20px;
         height: 20px;
         background-image: url('../images/main/activity-btn01.png');
       }
-
-      &:hover {
-        background: $color-main-w;
-        border-color: $color-main-w;
-        color: $color-main-bk;
-      }
-
-      &:hover:after {
-        background-image: url('../images/main/activity-btn01_hover.png');
-      }
     }
 
-    .btn-white {
+    .btn-reservation {
       background: $color-main-w;
-      border-color: $color-main-w;
+      color: $color-main-bk;
+
+      &:hover {
+        background: $color-main-bk;
+        color: $color-main-w;
+      }
 
       &::after {
         width: 23px;
         height: 19px;
         background-image: url('../images/main/activity-btn02.png');
-      }
-
-      &:hover {
-        background: #2E80FB;
-        border-color: #2E80FB;
-        color: $color-main-w;
-      }
-
-      &:hover:after {
-        background-image: url('../images/main/activity-btn02_hover.png');
       }
     }
   }
@@ -309,7 +289,6 @@
     flex-direction: column;
     justify-content: space-between;
     width: calc(100% - 30% - 46px);
-    color: #fff;
 
     strong {
       display: block;
@@ -595,6 +574,7 @@
           left: 50%;
           transform: translate(-50%, -50%);
           z-index: 1;
+          color: $color-main-w;
         }
       }
     }

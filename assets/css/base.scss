@@ -27,6 +27,7 @@ $fs-title1 : 2.625rem; // 42px
 $fs-title2 : 2.125rem; // 34px
 
 /* 믹스인 */
+// 타이틀
 @mixin title1() {
   margin-bottom: 50px;
   font-family: 'Cafe24Surround', 'NanumSquareRound', 'Nanum Gothic', sans-serif;
@@ -48,16 +49,40 @@ $fs-title2 : 2.125rem; // 34px
   font-weight: bold;
 }
 
-@mixin btn($br: 0px) {
+// 버튼
+@mixin btn() {
   display: inline-block;
   padding: 14px 28px;
-  background: none;
-  border: 1px solid $color-main-bk;
-  border-radius: $br;
+  background: $color-main-r;
+  border-radius: 24px;
+  color: $color-main-w;
 
   &:hover {
     background: $color-main-bk;
-    color: $color-main-w;
+  }
+}
+
+@mixin btn-line() {
+  display: inline-block;
+  padding: 14px 28px;
+  background: none;
+  border: 1px solid $color-main-r;
+  color: $color-main-bk;
+
+  &:hover {
+    background: $color-main-r;
+  }
+}
+
+@mixin btn2() {
+  display: inline-block;
+  padding: 14px 28px;
+  background: $color-main-lr;
+  border-radius: 13px;
+  color: $color-main-w;
+
+  &:hover {
+    background: $color-main-bk;
   }
 }
 

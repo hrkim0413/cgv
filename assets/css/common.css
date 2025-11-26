@@ -88,52 +88,34 @@ a {
 .btn {
   display: inline-block;
   padding: 14px 28px;
-  background: none;
-  border: 1px solid #121212;
-  border-radius: 0px;
+  background: #ED0E02;
+  border-radius: 24px;
+  color: #fff;
 }
 .btn:hover {
   background: #121212;
-  color: #fff;
 }
 
-.btn-round24 {
+.btn-line {
   display: inline-block;
   padding: 14px 28px;
   background: none;
-  border: 1px solid #121212;
-  border-radius: 24px;
+  border: 1px solid #ED0E02;
+  color: #121212;
 }
-.btn-round24:hover {
-  background: #121212;
-  color: #fff;
-}
-
-.btn-round10 {
-  display: inline-block;
-  padding: 14px 28px;
-  background: none;
-  border: 1px solid #121212;
-  border-radius: 10px;
-}
-.btn-round10:hover {
-  background: #121212;
-  color: #fff;
-}
-
-.btn-sub {
-  display: block;
-  width: 100%;
-  padding: 18px 10px;
-  background: #FC5555;
-  border: 1px solid #FC5555;
-  border-radius: 12px;
-  color: #fff;
-  font-size: 1.375rem;
-  text-align: center;
-}
-.btn-sub:hover {
+.btn-line:hover {
   background: #ED0E02;
+}
+
+.btn2 {
+  display: inline-block;
+  padding: 14px 28px;
+  background: #FC5555;
+  border-radius: 13px;
+  color: #fff;
+}
+.btn2:hover {
+  background: #121212;
 }
 
 .main-title {
@@ -160,6 +142,15 @@ header .logo {
 }
 header .logo img {
   width: 100%;
+}
+header .top-menu .btn-hd-login {
+  background: none;
+  border: 1px solid #121212;
+  color: #121212;
+}
+header .top-menu .btn-hd-login:hover {
+  background: #121212;
+  color: #fff;
 }
 
 /* nav */
