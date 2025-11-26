@@ -6,11 +6,86 @@
 /* 영화 예매 */
 .main-reservation {
   .inner {}
+
+
 }
 
 /* 극장 */
 .main-theater {
-  .inner {}
+  position: relative;
+  background: $color-main-dg;
+
+  .inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main-title {
+    text-align: center;
+    color: $color-main-w;
+  }
+
+  .box {
+    width: 1400px;
+    height: 516px;
+    position: relative;
+    display: flex;
+
+    img {
+      position: absolute;
+      z-index: 100;
+    }
+
+    .ticket1,
+    .ticket3 {
+      height: 452px;
+      top: 16px;
+    }
+
+    .ticket2 {
+      left: 394px;
+      top: -14px;
+      height: 512px;
+    }
+
+    .ticket3 {
+      left: 1382px;
+    }
+  }
+
+  .theater-txt {
+    background-color: $color-main-r;
+    margin-left: 16px;
+    width: 392px;
+    height: 484px;
+    padding: 30px 40px;
+
+    .swiper-slide {
+      display: flex;
+      color: $color-main-lg;
+      font-weight: lighter;
+      line-height: 100%;
+      cursor: pointer;
+      align-items: center;
+    }
+
+    .swiper-slide-thumb-active {
+      color: $color-main-w;
+      font-weight: bold;
+      font-size: 20px;
+    }
+  }
+
+  .theater-images {
+    width: 990px;
+    height: 484px;
+
+    .swiper-button-next,
+    .swiper-button-prev,
+    .swiper-pagination {
+      display: none;
+    }
+  }
 }
 
 /* 영화 소개 */

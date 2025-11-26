@@ -33,6 +33,71 @@ html {
 }
 /* 영화 예매 */
 /* 극장 */
+.main-theater {
+  position: relative;
+  background: #242424;
+}
+.main-theater .inner {
+  display: flex;
+  flex-direction: column;
+}
+.main-theater .main-title {
+  text-align: center;
+  color: #fff;
+}
+.main-theater .box {
+  width: 1400px;
+  height: 516px;
+  position: relative;
+  display: flex;
+}
+.main-theater .box img {
+  position: absolute;
+  z-index: 100;
+}
+.main-theater .box .ticket1,
+.main-theater .box .ticket3 {
+  height: 452px;
+  top: 16px;
+}
+.main-theater .box .ticket2 {
+  left: 394px;
+  top: -14px;
+  height: 512px;
+}
+.main-theater .box .ticket3 {
+  left: 1382px;
+}
+.main-theater .theater-txt {
+  background-color: #ED0E02;
+  margin-left: 16px;
+  width: 392px;
+  height: 484px;
+  padding: 30px 40px;
+}
+.main-theater .theater-txt .swiper-slide {
+  display: flex;
+  color: #F4F4F4;
+  font-weight: lighter;
+  line-height: 100%;
+  cursor: pointer;
+  align-items: center;
+}
+.main-theater .theater-txt .swiper-slide-thumb-active {
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+}
+.main-theater .theater-images {
+  width: 990px;
+  height: 484px;
+}
+.main-theater .theater-images .swiper-button-next,
+.main-theater .theater-images .swiper-button-prev,
+.main-theater .theater-images .swiper-pagination {
+  display: none;
+}
+
 /* 영화 소개 */
 .main-introduce {
   position: relative;

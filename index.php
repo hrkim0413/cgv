@@ -35,7 +35,51 @@
     <section class="main-theater" id="main-theater">
       <div class="inner">
         <h2 class="main-title">DEEP DIVE SPACE</h2>
-        서현님
+        <div class="box">
+          <img src="./assets/images/main/ticket01.png" alt="티켓이미지" class="ticket1">
+          <div class="swiper theater-txt">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">SCREENX</div>
+              <div class="swiper-slide">4DX</div>
+              <div class="swiper-slide">ULTRA 4DX</div>
+              <div class="swiper-slide">IMAX</div>
+              <div class="swiper-slide">DOLBY ATMOS</div>
+              <div class="swiper-slide">SOUNDX</div>
+              <div class="swiper-slide">SUITE CINEMA</div>
+              <div class="swiper-slide">CINE de CHEF</div>
+              <div class="swiper-slide">TEMPUR CINEMA</div>
+              <div class="swiper-slide">GOLD CLASS</div>
+              <div class="swiper-slide">THE PRIVATE CINEMA </div>
+              <div class="swiper-slide">PREMIUM</div>
+              <div class="swiper-slide">CINE & LIVING ROOM</div>
+            </div>
+          </div>
+          <img src="./assets/images/main/ticket02.png" alt="티켓이미지2" class="ticket2">
+          <div class="swiper theater-images">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="./assets/images/main/theaterImage_1.jpg" alt="SCREENX"></div>
+              <div class="swiper-slide"><img src="./assets/images/main/theaterImage_2.jpg" alt="4DX"></div>
+              <div class="swiper-slide"><img src="./assets/images/main/theaterImage_3.jpg" alt="ULTRA 4DX"></div>
+              <div class="swiper-slide"><img src="./assets/images/main/theaterImage_4.jpg" alt="IMAX"></div>
+              <div class="swiper-slide"><img src="./assets/images/main/theaterImage_5.jpg" alt="DOLBY ATMOS"></div>
+              <div class="swiper-slide"><img src="./assets/images/main/theaterImage_6.jpg" alt="SOUNDX"></div>
+              <div class="swiper-slide"><img src="./assets/images/main/theaterImage_7.jpg" alt="SUITE CINEMA"></div>
+              <div class="swiper-slide"><img src="./assets/images/main/theaterImage_8.jpg" alt="CINE de CHEF"></div>
+              <div class="swiper-slide"><img src="./assets/images/main/theaterImage_9.jpg" alt="TEMPUR CINEMA"></div>
+              <div class="swiper-slide"><img src="./assets/images/main/theaterImage_10.jpg" alt="GOLD CLASS"></div>
+              <div class="swiper-slide"><img src="./assets/images/main/theaterImage_11.jpg" alt="THE PRIVATE CINEMA ">
+              </div>
+              <div class="swiper-slide"><img src="./assets/images/main/theaterImage_12.jpg" alt="PREMIUM"></div>
+              <div class="swiper-slide"><img src="./assets/images/main/theaterImage_13.jpg" alt="CINE & LIVING ROOM">
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <img src="./assets/images/main/ticket01.png" alt="티켓이미지" class="ticket3">
+        </div>
+      </div>
       </div>
     </section>
 

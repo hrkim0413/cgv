@@ -6,6 +6,7 @@ function mainInit() {
   introduceFn();
   eventFn();
   activityFn();
+  theaterImgFn();
 }
 
 function introduceFn() {
@@ -165,4 +166,34 @@ function activityFn() {
       desc.innerHTML = itemdata[idx].desc;
     })
   })
+}
+
+function theaterImgFn() {
+  let txtSwiper = new Swiper(".theater-txt", {
+    // autoplay: {
+    //   delay: 2500,
+    //   disableOnInteraction: false,
+    // },
+    slidesPerView: 13,
+    direction: "vertical",
+  });
+
+  let imgSwiper = new Swiper(".theater-images", {
+
+    // autoplay: {
+    //   delay: 2500,
+    //   disableOnInteraction: false,
+    // },
+    pagination: {
+      el: ".theater-images .swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".theater-images .swiper-button-next",
+      prevEl: ".theater-images .swiper-button-prev",
+    },
+    thumbs: {
+      swiper: txtSwiper,
+    },
+  });
 }
