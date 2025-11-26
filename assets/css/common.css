@@ -251,6 +251,10 @@ footer .desc {
   color: #A7A7A7;
   line-height: 1.4;
 }
+footer .desc .copy {
+  display: block;
+  margin-top: 10px;
+}
 footer .sns {
   display: flex;
   gap: 10px;

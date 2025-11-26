@@ -78,12 +78,13 @@
         margin-bottom: 20px;
         color: $color-main-w;
         font-size: $fs-basic-big;
+        font-weight: bold;
       }
 
       dl {
         display: flex;
         justify-content: flex-start;
-        align-items: center;
+        align-items: flex-start;
         flex-wrap: wrap;
         margin-bottom: 20px;
       }
@@ -98,12 +99,12 @@
       }
 
       dt {
-        width: 40%;
+        width: 110px;
         color: $color-main-g;
       }
 
       dd {
-        width: 60%;
+        width: calc(100% - 110px);
         color: $color-main-w;
         text-align: right;
       }
@@ -113,6 +114,7 @@
         color: $color-main-w;
         font-size: $fs-basic-big;
         text-align: right;
+        font-weight: bold;
       }
     }
 
@@ -152,6 +154,7 @@
         position: relative;
         margin-top: 40px;
         font-size: $fs-basic-big;
+        font-weight: bold;
 
         &::before {
           content: '';
@@ -173,17 +176,112 @@
   }
 }
 
-@media screen and (max-width: 1023px) and (min-width: 769px) {
+/* 회원가입 join.php */
+#join {
+  .join-con {
+    .main-title {
+      text-align: center;
+    }
 
-  /* 장바구니 cart.php */
-  #cart {}
+    form {
+      width: 686px;
+      margin: auto;
+    }
+
+    .input-box {
+      margin-bottom: 30px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 16px;
+
+      .red {
+        color: $color-main-r;
+      }
+
+      .gray {
+        color: $color-main-g;
+      }
+    }
+
+    input {
+      width: 100%;
+      padding: 0 10px;
+      line-height: 50px;
+      border-radius: 13px;
+      border: 1px solid $color-main-g;
+    }
+
+    .ck-box {
+      margin-bottom: 30px;
+
+      li {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      input {
+        width: 25px;
+        height: 25px;
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+        border-radius: 0;
+        border: 1px solid $color-main-g;
+        border-radius: 3px;
+      }
+
+      label {
+        margin-bottom: 0;
+      }
+    }
+
+    .btn-join {
+      font-family: "NanumSquareRound", "Nanum Gothic", sans-serif;
+      font-size: $fs-nav;
+      border: none;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    // 아이디
+    .input-box-id {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      label {
+        width: 100%;
+      }
+
+      input {
+        width: 454px;
+      }
+
+      .btn-id {
+        width: 222px;
+      }
+    }
+  }
 }
+
+@media screen and (max-width: 1023px) and (min-width: 769px) {}
 
 @media screen and (max-width: 768px) {
 
   /* 장바구니 cart.php */
   #cart {
     .cart-con {
+      overflow: hidden;
+
       .con {
         display: block;
       }
@@ -193,7 +291,7 @@
         width: 100%;
 
         li {
-          padding: 20px 40px;
+          padding: 20px 30px;
 
           &::before,
           &::after {
@@ -249,6 +347,59 @@
       }
     }
   }
+
+  /* 회원가입 join.php */
+  #join {
+    .join-con {
+      form {
+        max-width: 640px;
+        width: 100%;
+      }
+
+      .input-box {
+        margin-bottom: mo-rem(32);
+      }
+
+      label {
+        margin-bottom: mo-rem(16);
+      }
+
+      input {
+        font-size: 1rem;
+        line-height: mo-rem(88);
+      }
+
+      .ck-box {
+        margin-bottom: mo-rem(32);
+
+        input {
+          width: mo-rem(25);
+          height: mo-rem(25);
+        }
+      }
+
+      // 아이디
+      .input-box-id {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 0 10px;
+
+        label {
+          width: 100%;
+        }
+
+        input {
+          width: calc(100% - mo-vw(220) - 10px);
+        }
+
+        .btn-id {
+          width: mo-vw(220);
+          padding: 14px 0;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -257,6 +408,14 @@
   #cart {
     .cart-con .movies li {
       padding: 20px;
+    }
+
+    .cart-con .movies dt {
+      width: 70px;
+    }
+
+    .cart-con .movies dd {
+      width: calc(100% - 70px);
     }
   }
 }

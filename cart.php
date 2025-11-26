@@ -45,9 +45,9 @@
                   <dt>상영시간</dt>
                   <dd>오전 10:25</dd>
                   <dt>인원</dt>
-                  <dd>일반 2인, 청소년 1인</dd>
+                  <dd>일반 2인</dd>
                 </dl>
-                <span class="m-price">15,000₩</span>
+                <span class="m-price">30,000₩</span>
               </div>
             </li>
           </ul>
@@ -56,11 +56,11 @@
               <h3 class="a-tit">금액</h3>
               <dl>
                 <dt>영화금액</dt>
-                <dd>15,000₩</dd>
+                <dd>30,000₩</dd>
                 <dt>할인금액</dt>
-                <dd>-2,000₩</dd>
+                <dd>-4,000₩</dd>
                 <dt>총합계</dt>
-                <dd>13,000₩</dd>
+                <dd>26,000₩</dd>
               </dl>
             </div>
             <a href="#" class="btn2 btn-payment">결제하기</a>

@@ -1,0 +1,11 @@
+* 회원가입
+create table cgv_members(
+  mb_no int(10) not null primary key auto_increment,
+  mb_id varchar(20) not null,
+  mb_pw varchar(255) not null,
+  mb_pw2 varchar(255) not null,
+  mb_name varchar(20) not null,
+  mb_birth varchar(8) not null,
+  mb_phone varchar(11) not null,
+  mb_date timestamp not null 
+);

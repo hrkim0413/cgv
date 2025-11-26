@@ -221,6 +221,11 @@ footer {
   .desc {
     color: $color-main-g;
     line-height: 1.4;
+
+    .copy {
+      display: block;
+      margin-top: 10px;
+    }
   }
 
   .sns {

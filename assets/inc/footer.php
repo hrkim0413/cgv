@@ -17,7 +17,10 @@
       <p class="desc">
         대표이사 : 정종민 <br class="mo-show">(04377)서울특별시 용산구 한강대로 23길 55, 아이파크몰 6층(한강로동) <br>
         통신판매업신고번호 : 2017-서울용산-0662 <br class="mo-show">사업자정보확인 사업자등록번호 : 104-81-45690 <br>
-        호스팅사업자 : CJ올리브네트웍스 <br class="mo-show">대표이메일 : cjcgvmaster@cj.net <br class="mo-show">고객센터 : 1544-1122
+        호스팅사업자 : CJ올리브네트웍스 <br class="mo-show">대표이메일 : cjcgvmaster@cj.net <br class="mo-show">고객센터 : 1544-1122 <br>
+        <span class="copy">
+          Copyright CGV, All rights reserved.
+        </span>
       </p>
       <ul class="sns">
         <li>
