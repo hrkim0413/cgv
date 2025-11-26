@@ -135,7 +135,7 @@ html {
 
 /* 액티비티 */
 .main-activity {
-  background: linear-gradient(to bottom, #CF8DFB 0%, #B98EFC 40%, #9D91FF 100%);
+  background: #F4F4F4;
 }
 .main-activity .inner {
   display: flex;
@@ -144,7 +144,6 @@ html {
 }
 .main-activity .main-title {
   width: 100%;
-  color: #fff;
 }
 .main-activity .big-box {
   width: 30%;
@@ -175,47 +174,29 @@ html {
   background-size: cover;
   vertical-align: bottom;
 }
-.main-activity .big-box .btn-blue {
-  background: #2E80FB;
-  border-color: #2E80FB;
-  color: #fff;
-}
-.main-activity .big-box .btn-blue::after {
+.main-activity .big-box .btn-more::after {
   width: 20px;
   height: 20px;
   background-image: url("../images/main/activity-btn01.png");
 }
-.main-activity .big-box .btn-blue:hover {
+.main-activity .big-box .btn-reservation {
   background: #fff;
-  border-color: #fff;
   color: #121212;
 }
-.main-activity .big-box .btn-blue:hover:after {
-  background-image: url("../images/main/activity-btn01_hover.png");
+.main-activity .big-box .btn-reservation:hover {
+  background: #121212;
+  color: #fff;
 }
-.main-activity .big-box .btn-white {
-  background: #fff;
-  border-color: #fff;
-}
-.main-activity .big-box .btn-white::after {
+.main-activity .big-box .btn-reservation::after {
   width: 23px;
   height: 19px;
   background-image: url("../images/main/activity-btn02.png");
-}
-.main-activity .big-box .btn-white:hover {
-  background: #2E80FB;
-  border-color: #2E80FB;
-  color: #fff;
-}
-.main-activity .big-box .btn-white:hover:after {
-  background-image: url("../images/main/activity-btn02_hover.png");
 }
 .main-activity .small-box {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: calc(70% - 46px);
-  color: #fff;
 }
 .main-activity .small-box strong {
   display: block;
@@ -443,6 +424,7 @@ html {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
+    color: #fff;
   }
 }
 @media screen and (max-width: 620px) {

@@ -39,34 +39,15 @@
                   <dt>극장</dt>
                   <dd>CGV강남</dd>
                   <dt>상영관</dt>
-                  <dd>4DX관</dd>
-                  <dt>상영등급</dt>
-                  <dd>전체관람가</dd>
+                  <dd>4DX 1관</dd>
                   <dt>날짜</dt>
                   <dd>2025.12.12 금</dd>
                   <dt>상영시간</dt>
                   <dd>오전 10:25</dd>
+                  <dt>인원</dt>
+                  <dd>일반 2인, 청소년 1인</dd>
                 </dl>
-              </div>
-            </li>
-            <li>
-              <div class="img-box">
-                <img src="./assets/images/sub/cart-movie01.jpg" alt="주토피아">
-              </div>
-              <div class="txt-box">
-                <strong class="m-tit">주토피아</strong>
-                <dl>
-                  <dt>극장</dt>
-                  <dd>CGV강남</dd>
-                  <dt>상영관</dt>
-                  <dd>4DX관</dd>
-                  <dt>상영등급</dt>
-                  <dd>전체관람가</dd>
-                  <dt>날짜</dt>
-                  <dd>2025.12.12 금</dd>
-                  <dt>상영시간</dt>
-                  <dd>오전 10:25</dd>
-                </dl>
+                <span class="m-price">15,000₩</span>
               </div>
             </li>
           </ul>
@@ -82,7 +63,7 @@
                 <dd>13,000₩</dd>
               </dl>
             </div>
-            <a href="#" class="btn btn-sub">결제하기</a>
+            <a href="#" class="btn2 btn-payment">결제하기</a>
           </div>
         </div>
       </div>

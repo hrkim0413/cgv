@@ -89,7 +89,7 @@ html {
 }
 #cart .cart-con .movies .txt-box {
   width: calc(100% - 150px);
-  padding: 30px;
+  padding: 0 30px;
 }
 #cart .cart-con .movies .m-tit {
   display: block;
@@ -102,7 +102,7 @@ html {
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
-  padding: 0 10px;
+  margin-bottom: 20px;
 }
 #cart .cart-con .movies dt,
 #cart .cart-con .movies dd {
@@ -119,6 +119,12 @@ html {
 #cart .cart-con .movies dd {
   width: 60%;
   color: #fff;
+  text-align: right;
+}
+#cart .cart-con .movies .m-price {
+  display: block;
+  color: #fff;
+  font-size: 1.25rem;
   text-align: right;
 }
 #cart .cart-con .amount {
@@ -164,12 +170,13 @@ html {
   height: 1px;
   background: #A7A7A7;
 }
+#cart .cart-con .amount .btn-payment {
+  width: 100%;
+  text-align: center;
+}
 
 @media screen and (max-width: 1023px) and (min-width: 769px) {
   /* 장바구니 cart.php */
-  #cart .cart-con .movies dl {
-    padding: 0;
-  }
 }
 @media screen and (max-width: 768px) {
   /* 장바구니 cart.php */
@@ -209,9 +216,6 @@ html {
   }
   #cart .cart-con .movies .m-tit {
     margin-bottom: 1rem;
-  }
-  #cart .cart-con .movies dl {
-    padding: 0;
   }
   #cart .cart-con .amount {
     max-width: none;

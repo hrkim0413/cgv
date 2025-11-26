@@ -130,8 +130,8 @@
             <img src="./assets/images/main/activity-b01.png" alt="클라이밍">
           </div>
           <div class="btns">
-            <a href="javascript:alert('준비중인 페이지입니다.');" title="더보기" class="btn btn-round24 btn-blue">더보기</a>
-            <a href="./reservation/index.php" title="예매하기" class="btn btn-round24 btn-white">예매하기</a>
+            <a href="javascript:alert('준비중인 페이지입니다.');" title="더보기" class="btn btn-more">더보기</a>
+            <a href="./reservation/index.php" title="예매하기" class="btn btn-reservation">예매하기</a>
           </div>
         </div>
         <div class="small-box">
