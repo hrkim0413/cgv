@@ -16,6 +16,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
   <!-- 스와이퍼 css -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+  <style>
+
+  </style>
 </head>
 
 <body>
@@ -27,7 +30,27 @@
     <!-- 영화 예매 -->
     <section class="main-reservation" id="main-reservation">
       <div class="inner">
-        진영님
+        <div class="slider-section">
+          <div class="section-header">
+            <div class="tab-buttons">
+              <button class="tab-btn active" id="currentBtn">현재 상영작</button>
+              <button class="tab-btn" id="upcomingBtn">개봉 예정작</button>
+            </div>
+          </div>
+
+          <div class="slider-container">
+            <div class="slider-wrapper" id="sliderWrapper">
+            </div>
+          </div>
+
+          <div class="slider-dots">
+            <div class="control-buttons">
+              <button class="control-btn" id="bottomPrevBtn">❮</button>
+              <button class="control-btn" id="pauseBtn">⏸</button> <!-- JS에서 1/8 등으로 변경 -->
+              <button class="control-btn" id="bottomNextBtn">❯</button>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -231,6 +254,7 @@
       </div>
     </section>
   </main>
+  <!-- 테스트 -->
 
   <!-- footer -->
   <?php include("./assets/inc/footer.php");?>
