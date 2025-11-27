@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CGV</title>
+  <title>CGV | 메인</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
   <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
@@ -16,18 +16,41 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
   <!-- 스와이퍼 css -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+  <style>
+
+  </style>
 </head>
 
 <body>
   <!-- header -->
-  <?php include('./assets/inc/header.php');?>
+  <?php include("./assets/inc/header.php");?>
 
   <!-- main -->
   <main id="main">
     <!-- 영화 예매 -->
     <section class="main-reservation" id="main-reservation">
       <div class="inner">
-        진영님
+        <div class="slider-section">
+          <div class="section-header">
+            <div class="tab-buttons">
+              <button class="tab-btn active" id="currentBtn">현재 상영작</button>
+              <button class="tab-btn" id="upcomingBtn">개봉 예정작</button>
+            </div>
+          </div>
+
+          <div class="slider-container">
+            <div class="slider-wrapper" id="sliderWrapper">
+            </div>
+          </div>
+
+          <div class="slider-dots">
+            <div class="control-buttons">
+              <button class="control-btn" id="bottomPrevBtn">❮</button>
+              <button class="control-btn" id="pauseBtn">⏸</button> <!-- JS에서 1/8 등으로 변경 -->
+              <button class="control-btn" id="bottomNextBtn">❯</button>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -231,9 +254,10 @@
       </div>
     </section>
   </main>
+  <!-- 테스트 -->
 
   <!-- footer -->
-  <?php include('./assets/inc/footer.php');?>
+  <?php include("./assets/inc/footer.php");?>
 
   <!-- 스와이퍼 js -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>

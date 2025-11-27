@@ -178,48 +178,81 @@ html {
   text-align: center;
 }
 
-/* 회원가입 join.php */
-#join .join-con .main-title {
+/* 회원가입 join.php, 로그인 login.php */
+#join .join-con .main-title,
+#join .login-con .main-title,
+#login .join-con .main-title,
+#login .login-con .main-title {
   text-align: center;
 }
-#join .join-con form {
+#join .join-con form,
+#join .login-con form,
+#login .join-con form,
+#login .login-con form {
   width: 686px;
   margin: auto;
 }
-#join .join-con .input-box {
+#join .join-con .input-box,
+#join .login-con .input-box,
+#login .join-con .input-box,
+#login .login-con .input-box {
   margin-bottom: 30px;
 }
-#join .join-con label {
+#join .join-con label,
+#join .login-con label,
+#login .join-con label,
+#login .login-con label {
   display: block;
   margin-bottom: 16px;
 }
-#join .join-con label .red {
+#join .join-con label .red,
+#join .login-con label .red,
+#login .join-con label .red,
+#login .login-con label .red {
   color: #ED0E02;
 }
-#join .join-con label .gray {
+#join .join-con label .gray,
+#join .login-con label .gray,
+#login .join-con label .gray,
+#login .login-con label .gray {
   color: #A7A7A7;
 }
-#join .join-con input {
+#join .join-con input,
+#join .login-con input,
+#login .join-con input,
+#login .login-con input {
   width: 100%;
   padding: 0 10px;
   line-height: 50px;
   border-radius: 13px;
   border: 1px solid #A7A7A7;
 }
-#join .join-con .ck-box {
+#join .join-con .ck-box,
+#join .login-con .ck-box,
+#login .join-con .ck-box,
+#login .login-con .ck-box {
   margin-bottom: 30px;
 }
-#join .join-con .ck-box li {
+#join .join-con .ck-box li,
+#join .login-con .ck-box li,
+#login .join-con .ck-box li,
+#login .login-con .ck-box li {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 10px;
   margin-bottom: 10px;
 }
-#join .join-con .ck-box li:last-child {
+#join .join-con .ck-box li:last-child,
+#join .login-con .ck-box li:last-child,
+#login .join-con .ck-box li:last-child,
+#login .login-con .ck-box li:last-child {
   margin-bottom: 0;
 }
-#join .join-con .ck-box input {
+#join .join-con .ck-box input,
+#join .login-con .ck-box input,
+#login .join-con .ck-box input,
+#login .login-con .ck-box input {
   width: 25px;
   height: 25px;
   margin: 0;
@@ -229,135 +262,166 @@ html {
   border: 1px solid #A7A7A7;
   border-radius: 3px;
 }
-#join .join-con .ck-box label {
+#join .join-con .ck-box label,
+#join .login-con .ck-box label,
+#login .join-con .ck-box label,
+#login .login-con .ck-box label {
   margin-bottom: 0;
 }
-#join .join-con .btn-join {
+#join .join-con .btn2,
+#join .login-con .btn2,
+#login .join-con .btn2,
+#login .login-con .btn2 {
   font-family: "NanumSquareRound", "Nanum Gothic", sans-serif;
   font-size: 1.375rem;
   border: none;
   transition: 0.3s;
   cursor: pointer;
 }
-#join .join-con .input-box-id {
+#join .join-con .input-box-id,
+#join .login-con .input-box-id,
+#login .join-con .input-box-id,
+#login .login-con .input-box-id {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-#join .join-con .input-box-id label {
+#join .join-con .input-box-id label,
+#join .login-con .input-box-id label,
+#login .join-con .input-box-id label,
+#login .login-con .input-box-id label {
   width: 100%;
 }
-#join .join-con .input-box-id input {
+#join .join-con .input-box-id input,
+#join .login-con .input-box-id input,
+#login .join-con .input-box-id input,
+#login .login-con .input-box-id input {
   width: 454px;
 }
-#join .join-con .input-box-id .btn-id {
+#join .join-con .input-box-id .btn-id,
+#join .login-con .input-box-id .btn-id,
+#login .join-con .input-box-id .btn-id,
+#login .login-con .input-box-id .btn-id {
   width: 222px;
 }
 
-@media screen and (max-width: 768px) {
-  /* 장바구니 cart.php */
-  #cart .cart-con {
-    overflow: hidden;
-  }
-  #cart .cart-con .con {
-    display: block;
-  }
-  #cart .cart-con .movies {
-    max-width: none;
-    width: 100%;
-  }
-  #cart .cart-con .movies li {
-    padding: 20px 30px;
-  }
-  #cart .cart-con .movies li::before, #cart .cart-con .movies li::after {
-    width: 4.6875vw;
-    height: 41.40625vw;
-    background-image: url("../images/sub/cart-movie-icon01_mo.png");
-  }
-  #cart .cart-con .movies li::before {
-    left: -2.34375vw;
-  }
-  #cart .cart-con .movies li::after {
-    right: -2.34375vw;
-  }
-  #cart .cart-con .movies .img-box {
-    overflow: hidden;
-    width: 26.0416666667vw;
-    margin-right: 1rem;
-    border-radius: 0.5rem;
-  }
-  #cart .cart-con .movies .img-box::after {
-    display: none;
-  }
-  #cart .cart-con .movies .txt-box {
-    width: calc(100% - 26.0416666667vw);
-    padding: 0;
-  }
-  #cart .cart-con .movies .m-tit {
-    margin-bottom: 1rem;
-  }
-  #cart .cart-con .amount {
-    max-width: none;
-    width: 100%;
-  }
-  #cart .cart-con .amount .a-tit {
-    font-size: 1.375rem;
-  }
-  #cart .cart-con .amount dt:last-of-type,
-  #cart .cart-con .amount dd:last-of-type {
-    font-size: 1rem;
-  }
-  /* 회원가입 join.php */
-  #join .join-con form {
-    max-width: 640px;
-    width: 100%;
-  }
-  #join .join-con .input-box {
-    margin-bottom: 1rem;
-  }
-  #join .join-con label {
-    margin-bottom: 0.5rem;
-  }
-  #join .join-con input {
-    font-size: 1rem;
-    line-height: 2.75rem;
-  }
-  #join .join-con .ck-box {
-    margin-bottom: 1rem;
-  }
-  #join .join-con .ck-box input {
-    width: 0.78125rem;
-    height: 0.78125rem;
-  }
-  #join .join-con .input-box-id {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 0 10px;
-  }
-  #join .join-con .input-box-id label {
-    width: 100%;
-  }
-  #join .join-con .input-box-id input {
-    width: calc(100% - 28.6458333333vw - 10px);
-  }
-  #join .join-con .input-box-id .btn-id {
-    width: 28.6458333333vw;
-    padding: 14px 0;
-  }
+#login .join-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-@media screen and (max-width: 480px) {
-  /* 장바구니 cart.php */
-  #cart .cart-con .movies li {
-    padding: 20px;
-  }
-  #cart .cart-con .movies dt {
-    width: 70px;
-  }
-  #cart .cart-con .movies dd {
-    width: calc(100% - 70px);
-  }
+#login .join-box a {
+  display: block;
+  position: relative;
+  margin: 0 10px;
+  color: #A7A7A7;
 }
+#login .join-box a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -10px;
+  width: 1px;
+  height: 100%;
+  background: #A7A7A7;
+}
+#login .join-box a:last-child::after {
+  display: none;
+}
+
+/* 극장 > 전체극장 theater-search.php */
+#theater-search {
+  position: relative;
+}
+#theater-search .ts-con .bg {
+  width: 100%;
+  height: 100vh;
+}
+#theater-search .ts-con .bg img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#theater-search .ts-con form {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  background: #fff;
+}
+#theater-search .ts-con .title-box {
+  padding: 60px 30px;
+}
+#theater-search .ts-con .title-box p {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+#theater-search .ts-con .title-box p:last-of-type {
+  margin-bottom: 0;
+}
+#theater-search .ts-con .title-box select,
+#theater-search .ts-con .title-box input {
+  width: 100%;
+  padding: 16px 28px;
+  border: 1px solid #ED0E02;
+  border-radius: 45px;
+  font-size: 1rem;
+}
+#theater-search .ts-con .title-box input[type=submit] {
+  width: 105px;
+  margin-left: 15px;
+  border: none;
+  border-radius: 24px;
+  font-family: "NanumSquareRound", "Nanum Gothic", sans-serif;
+  font-size: 1.375rem;
+  transition: 0.3s;
+  cursor: pointer;
+}
+#theater-search .ts-con .title-box option {
+  font-size: 1rem;
+}
+#theater-search .ts-con .list-box {
+  overflow-y: scroll;
+  height: calc(100vh - 332px);
+}
+#theater-search .ts-con .list-box .list-title {
+  padding: 20px 30px;
+  background: #121212;
+  color: #fff;
+  font-size: 1.25rem;
+}
+#theater-search .ts-con .list-box .list > li {
+  padding: 30px 30px;
+  background: #F4F4F4;
+  border-bottom: 1px solid #A7A7A7;
+}
+#theater-search .ts-con .list-box .list > li:nth-child(even) {
+  background: #fff;
+}
+#theater-search .ts-con .list-box h4 {
+  margin-bottom: 10px;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+#theater-search .ts-con .list-box p {
+  margin-bottom: 40px;
+}
+#theater-search .ts-con .list-box .item {
+  display: flex;
+  gap: 10px;
+}
+#theater-search .ts-con .list-box .item a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
 /*시사회 & 전시회*/
 #preview {
   background-color: #242424;
@@ -458,4 +522,192 @@ html {
   transform: rotate(90deg);
   right: -80px;
   top: 140px;
+}
+
+@media screen and (max-width: 768px) {
+  /* 장바구니 cart.php */
+  #cart .cart-con {
+    overflow: hidden;
+  }
+  #cart .cart-con .con {
+    display: block;
+  }
+  #cart .cart-con .movies {
+    max-width: none;
+    width: 100%;
+  }
+  #cart .cart-con .movies li {
+    padding: 20px 30px;
+  }
+  #cart .cart-con .movies li::before, #cart .cart-con .movies li::after {
+    width: 4.6875vw;
+    height: 41.40625vw;
+    background-image: url("../images/sub/cart-movie-icon01_mo.png");
+  }
+  #cart .cart-con .movies li::before {
+    left: -2.34375vw;
+  }
+  #cart .cart-con .movies li::after {
+    right: -2.34375vw;
+  }
+  #cart .cart-con .movies .img-box {
+    overflow: hidden;
+    width: 26.0416666667vw;
+    margin-right: 1rem;
+    border-radius: 0.5rem;
+  }
+  #cart .cart-con .movies .img-box::after {
+    display: none;
+  }
+  #cart .cart-con .movies .txt-box {
+    width: calc(100% - 26.0416666667vw);
+    padding: 0;
+  }
+  #cart .cart-con .movies .m-tit {
+    margin-bottom: 1rem;
+  }
+  #cart .cart-con .amount {
+    max-width: none;
+    width: 100%;
+  }
+  #cart .cart-con .amount .a-tit {
+    font-size: 1.375rem;
+  }
+  #cart .cart-con .amount dt:last-of-type,
+  #cart .cart-con .amount dd:last-of-type {
+    font-size: 1rem;
+  }
+  /* 회원가입 join.php, 로그인 login.php */
+  #join .join-con form,
+  #join .login-con form,
+  #login .join-con form,
+  #login .login-con form {
+    max-width: 640px;
+    width: 100%;
+  }
+  #join .join-con .input-box,
+  #join .login-con .input-box,
+  #login .join-con .input-box,
+  #login .login-con .input-box {
+    margin-bottom: 1rem;
+  }
+  #join .join-con label,
+  #join .login-con label,
+  #login .join-con label,
+  #login .login-con label {
+    margin-bottom: 0.5rem;
+  }
+  #join .join-con input,
+  #join .login-con input,
+  #login .join-con input,
+  #login .login-con input {
+    font-size: 1rem;
+    line-height: 2.75rem;
+  }
+  #join .join-con .ck-box,
+  #join .login-con .ck-box,
+  #login .join-con .ck-box,
+  #login .login-con .ck-box {
+    margin-bottom: 1rem;
+  }
+  #join .join-con .ck-box input,
+  #join .login-con .ck-box input,
+  #login .join-con .ck-box input,
+  #login .login-con .ck-box input {
+    width: 0.78125rem;
+    height: 0.78125rem;
+  }
+  #join .join-con .input-box-id,
+  #join .login-con .input-box-id,
+  #login .join-con .input-box-id,
+  #login .login-con .input-box-id {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0 10px;
+  }
+  #join .join-con .input-box-id label,
+  #join .login-con .input-box-id label,
+  #login .join-con .input-box-id label,
+  #login .login-con .input-box-id label {
+    width: 100%;
+  }
+  #join .join-con .input-box-id input,
+  #join .login-con .input-box-id input,
+  #login .join-con .input-box-id input,
+  #login .login-con .input-box-id input {
+    width: calc(100% - 28.6458333333vw - 10px);
+  }
+  #join .join-con .input-box-id .btn-id,
+  #join .login-con .input-box-id .btn-id,
+  #login .join-con .input-box-id .btn-id,
+  #login .login-con .input-box-id .btn-id {
+    width: 28.6458333333vw;
+    padding: 14px 0;
+  }
+  /* 극장 > 전체극장 theater-search.php */
+  #theater-search .ts-con .bg {
+    position: absolute;
+    top: 390px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 52.0833333333vw;
+  }
+  #theater-search .ts-con form {
+    position: static;
+    height: auto;
+  }
+  #theater-search .ts-con .title-box {
+    margin-bottom: 52.0833333333vw;
+    padding: 1.875rem 0.625rem;
+  }
+  #theater-search .ts-con .title-box input[type=search] {
+    width: calc(100% - 15px - 23.4375vw);
+  }
+  #theater-search .ts-con .title-box input[type=submit] {
+    width: 23.4375vw;
+    padding: 16px 10px;
+    border-radius: 40px;
+  }
+  #theater-search .ts-con .list-box {
+    height: auto;
+  }
+  #theater-search .ts-con .list-box .list-title {
+    padding: 0.9375rem 1.25rem;
+  }
+  #theater-search .ts-con .list-box .list > li {
+    padding: 0.9375rem 1.25rem;
+  }
+  #theater-search .ts-con .list-box p {
+    margin-bottom: 1.875rem;
+    line-height: 1.4;
+  }
+  #theater-search .ts-con .list-box .item a {
+    width: 13.0208333333vw;
+  }
+  #theater-search .ts-con .list-box .item img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 620px) {
+  /* 극장 > 전체극장 theater-search.php */
+  #theater-search .ts-con .bg {
+    top: 310px;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* 장바구니 cart.php */
+  #cart .cart-con .movies li {
+    padding: 20px;
+  }
+  #cart .cart-con .movies dt {
+    width: 70px;
+  }
+  #cart .cart-con .movies dd {
+    width: calc(100% - 70px);
+  }
+  /* 극장 > 전체극장 theater-search.php */
+  #theater-search .ts-con .bg {
+    top: 230px;
+  }
 }/*# sourceMappingURL=sub.css.map */

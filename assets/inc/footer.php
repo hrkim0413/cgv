@@ -10,8 +10,8 @@
     </ul>
     <div class="f-box">
       <h2 class="logo">
-        <a href="./index.php" title="logo">
-          <img src="./assets/images/f-logo.png" alt="CGV">
+        <a href="/cgv/index.php" title="logo">
+          <img src="/cgv/assets/images/f-logo.png" alt="CGV">
         </a>
       </h2>
       <p class="desc">
@@ -25,17 +25,17 @@
       <ul class="sns">
         <li>
           <a href="https://x.com/CGV_KOREA" title="twitter-x" target="_blank">
-            <img src="./assets/images/sns01.png" alt="twitter-x">
+            <img src="/cgv/assets/images/sns01.png" alt="twitter-x">
           </a>
         </li>
         <li>
           <a href="https://www.instagram.com/cgv_korea/" title="instagram" target="_blank">
-            <img src="./assets/images/sns02.png" alt="instagram">
+            <img src="/cgv/assets/images/sns02.png" alt="instagram">
           </a>
         </li>
         <li>
           <a href="https://www.youtube.com/channel/UCmjUMtUw6wXLrsULdxuXWdg" title="youtube" target="_blank">
-            <img src="./assets/images/sns03.png" alt="youtube">
+            <img src="/cgv/assets/images/sns03.png" alt="youtube">
           </a>
         </li>
       </ul>

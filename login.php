@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CGV</title>
+  <title>CGV | 로그인</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
   <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
@@ -23,49 +23,33 @@
   <?php include("./assets/inc/header.php");?>
 
   <!-- main -->
-  <main id="cart">
-    <section class="cart-con">
+  <main id="login">
+    <section class="login-con">
       <div class="inner">
-        <h2 class="main-title">장바구니</h2>
-        <div class="con">
-          <ul class="movies">
+        <h2 class="main-title">로그인</h2>
+        <form action="./assets/php/login_insert.php" name="login_form" method="post">
+          <div class="input-box">
+            <label for="mb-id">아이디</label>
+            <input type="text" name="mb_id" id="mb-id" placeholder="아이디" maxlength="20" required>
+          </div>
+          <div class="input-box">
+            <label for="mb-pw">비밀번호</label>
+            <input type="password" name="mb_pw" id="mb-pw" placeholder="비밀번호" maxlength="20" required>
+          </div>
+          <ul class="ck-box">
             <li>
-              <div class="img-box">
-                <img src="./assets/images/sub/cart-movie01.jpg" alt="주토피아">
-              </div>
-              <div class="txt-box">
-                <strong class="m-tit">주토피아</strong>
-                <dl>
-                  <dt>극장</dt>
-                  <dd>CGV강남</dd>
-                  <dt>상영관</dt>
-                  <dd>4DX 1관</dd>
-                  <dt>날짜</dt>
-                  <dd>2025.12.12 금</dd>
-                  <dt>상영시간</dt>
-                  <dd>오전 10:25</dd>
-                  <dt>인원</dt>
-                  <dd>일반 2인</dd>
-                </dl>
-                <span class="m-price">30,000₩</span>
-              </div>
+              <input type="checkbox" name="mb_id_save" id="mb-id-save" required>
+              <label for="mb-id-save">아이디 저장</label>
             </li>
           </ul>
-          <div class="amount">
-            <div class="price">
-              <h3 class="a-tit">금액</h3>
-              <dl>
-                <dt>영화금액</dt>
-                <dd>30,000₩</dd>
-                <dt>할인금액</dt>
-                <dd>-4,000₩</dd>
-                <dt>총합계</dt>
-                <dd>26,000₩</dd>
-              </dl>
-            </div>
-            <a href="#" class="btn2 btn-payment">결제하기</a>
+          <div class="input-box">
+            <input type="submit" value="로그인" class="btn2 btn-login">
           </div>
-        </div>
+          <div class="join-box">
+            <a href="./join.php" title="회원가입">회원가입</a>
+            <a href="javascript:alert('준비중인 페이지입니다.')" title=" 아이디·비밀번호찾기"> 아이디·비밀번호찾기</a>
+          </div>
+        </form>
       </div>
     </section>
   </main>

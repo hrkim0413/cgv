@@ -2,11 +2,477 @@
 
 @use 'base' as *;
 
-
 /* 영화 예매 */
 .main-reservation {
-  .inner {}
+  .slider-section {
+    margin: 0 auto;
+  }
+
+  .section-header {
+    margin-bottom: 30px;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .tab-buttons {
+    display: flex;
+    gap: 15px;
+  }
+
+  .tab-btn {
+    padding: 12px 30px;
+    border: 2px solid #e50914;
+    background: transparent;
+    color: #242424;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 29px;
+  }
+
+  .tab-btn:hover,
+  .tab-btn.active:hover {
+    border-color: #1a1a1a;
+    background-color: #1a1a1a;
+    color: rgb(235, 234, 234);
+  }
+
+  .tab-btn.active {
+    background: #e50914;
+    color: white;
+    border-color: #e50914;
+  }
+
+  .slider-container {
+    padding: 15px 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .slider-wrapper {
+    display: flex;
+    gap: 30px;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .movie-card {
+    min-width: 360px;
+    width: 360px;
+    height: 540px;
+    position: relative;
+    border-radius: 26px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .movie-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* 지그재그 배치 */
+  .movie-card:nth-child(odd) {
+    margin-top: 40px;
+  }
+
+  .movie-card:nth-child(even) {
+    margin-top: 0px;
+  }
+
+  .movie-card:hover {
+    transform: scale(1.05);
+  }
+
+  .movie-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.3) 40%, rgba(0, 0, 0, 0) 60%);
+  }
+
+  .movie-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0 25px 25px;
+  }
+
+  .movie-title {
+    color: #fff;
+    font-size: 21px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .movie-meta {
+    color: #fff;
+    font-size: 18px;
+    opacity: 0.8;
+    margin-bottom: 15px;
+  }
+
+  .movie-rating {
+    display: inline-block;
+    background: #e50914;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+
+  .movie-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .info-btn,
+  .book-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    border-radius: 25px;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    padding: 10px 20px;
+  }
+
+  .info-btn {
+    background: #fff;
+    color: #0a0a0a;
+  }
+
+  .info-btn:hover {
+    background: #f56009ff;
+    color: #fafafaff;
+    transform: translateY(-2px);
+  }
+
+  .book-btn {
+    background: #FFE665;
+    color: #0a0a0a;
+    gap: 8px;
+  }
+
+  .book-btn:hover {
+    background: #f56009ff;
+    color: #fafafaff;
+    transform: translateY(-2px);
+  }
+
+  .arrow-icon {
+    font-size: 16px;
+    transform: rotate(-45deg);
+  }
+
+  .slider-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    position: relative;
+    width: 100%;
+  }
+
+  .slider-dots::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 10px;
+    transform: translateX(-50%);
+    width: 800px;
+    height: 3px;
+    background: linear-gradient(to right, #e50914 0%, rgba(229, 9, 20, 0.5) 100%);
+    margin-right: 400px;
+  }
+
+  .control-buttons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    position: absolute;
+    right: calc(50% - 600px + 20px);
+    top: -10px;
+    z-index: 1;
+  }
+
+  .control-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background: #e50914;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .control-btn:hover {
+    background: #f40612;
+    transform: scale(1.1);
+  }
+
+  /* 슬라이더 하단 숫자/일시정지 버튼 */
+  #pauseBtn {
+    background: none;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    background: #e50914;
+  }
+
+  /* ===========================
+      반응형
+  =========================== */
+  @media (max-width: 1199px) {
+    .section-title {
+      font-size: 24px;
+    }
+
+    .tab-btn {
+      padding: 10px 25px;
+      font-size: 18px;
+    }
+
+    .slider-wrapper {
+      gap: 20px;
+    }
+
+    .movie-card {
+      min-width: 300px;
+      width: 300px;
+      height: 450px;
+    }
+
+    .movie-card:nth-child(odd) {
+      margin-top: 30px;
+    }
+
+    .movie-title {
+      font-size: 19px;
+    }
+
+    .movie-meta {
+      font-size: 16px;
+    }
+
+    .info-btn,
+    .book-btn {
+      padding: 8px 16px;
+      font-size: 17px;
+    }
+
+    .slider-dots::before {
+      width: 600px;
+      margin-right: 300px;
+    }
+
+    .control-buttons {
+      right: calc(50% - 450px + 20px);
+    }
+
+    .control-btn {
+      width: 36px;
+      height: 36px;
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .section-header {
+      margin-bottom: 20px;
+    }
+
+    .section-title {
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
+
+    .tab-buttons {
+      gap: 10px;
+    }
+
+    .tab-btn {
+      padding: 8px 20px;
+      font-size: 16px;
+      border-radius: 20px;
+    }
+
+    .slider-container {
+      padding: 10px 0;
+    }
+
+    .slider-wrapper {
+      gap: 15px;
+    }
+
+    .movie-card {
+      min-width: 280px;
+      width: 280px;
+      height: 420px;
+      border-radius: 20px;
+    }
+
+    .movie-card:nth-child(odd),
+    .movie-card:nth-child(even) {
+      margin-top: 0;
+    }
+
+    .movie-card:hover {
+      transform: scale(1.02);
+    }
+
+    .movie-info {
+      padding: 0 20px 20px;
+    }
+
+    .movie-title {
+      font-size: 18px;
+      margin-bottom: 4px;
+    }
+
+    .movie-meta {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .movie-rating {
+      font-size: 12px;
+      padding: 3px 8px;
+      margin-bottom: 10px;
+    }
+
+    .movie-actions {
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .info-btn,
+    .book-btn {
+      width: 100%;
+      justify-content: center;
+      padding: 10px 15px;
+      font-size: 16px;
+    }
+
+    .arrow-icon {
+      font-size: 14px;
+    }
+
+    .slider-dots {
+      margin-top: 30px;
+    }
+
+    .slider-dots::before {
+      display: none;
+    }
+
+    .control-buttons {
+      position: static;
+      justify-content: center;
+
+      gap: 10px;
+      width: 100%;
+    }
+
+    #pauseBtn {
+      border-radius: 25px !important;
+      /* 기존 50%를 덮어쓰기 */
+      font-size: 18px;
+      color: #fff;
+      background: #e50914;
+      width: 95px;
+      height: 44px;
+    }
+
+    .control-btn {
+      width: 44px;
+      height: 44px;
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .section-title {
+      font-size: 20px;
+    }
+
+    .tab-btn {
+      margin-bottom: 10px;
+      padding: 6px 15px;
+      font-size: 20px;
+    }
+
+    .movie-card {
+      min-width: 260px;
+      width: 260px;
+      height: 390px;
+    }
+
+    .movie-title {
+      font-size: 16px;
+    }
+
+    .movie-meta {
+      font-size: 13px;
+    }
+
+    .info-btn,
+    .book-btn {
+      font-size: 14px;
+      padding: 8px 12px;
+    }
+
+    .slider-dots::before {
+      display: none;
+    }
+
+    #pauseBtn {
+      border-radius: 25px !important;
+      /* 기존 50%를 덮어쓰기 */
+      font-size: 18px;
+      color: #fff;
+      background: #e50914;
+      width: 95px;
+      height: 44px;
+    }
+
+    .control-btn {
+      width: 44px;
+      height: 44px;
+      font-size: 14px;
+    }
+  }
 }
+
 
 /* 극장 */
 .main-theater {

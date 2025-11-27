@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CGV</title>
+  <title>CGV | 회원가입</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
   <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
@@ -20,7 +20,7 @@
 
 <body>
   <!-- header -->
-  <?php include('./assets/inc/header.php');?>
+  <?php include("./assets/inc/header.php");?>
 
   <!-- main -->
   <main id="join">
@@ -67,7 +67,7 @@
               <label for="mb-ck3">개인정보의 제 3자 제공 <span class="red">(필수)</span></label>
             </li>
             <li>
-              <input type="checkbox" name="mb_ck4" id="mb-ck4" required>
+              <input type="checkbox" name="mb_ck4" id="mb-ck4">
               <label for="mb-ck4">이벤트 및 정보수신 선택 <span class="gray">(선택)</span></label>
             </li>
           </ul>
@@ -78,7 +78,7 @@
   </main>
 
   <!-- footer -->
-  <?php include('./assets/inc/footer.php');?>
+  <?php include("./assets/inc/footer.php");?>
 
   <!-- 스와이퍼 js -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
