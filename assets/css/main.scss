@@ -24,37 +24,42 @@
   }
 
   .box {
-    width: 1400px;
-    height: 516px;
+    //height: 516px;
     position: relative;
     display: flex;
 
-    img {
+    >img {
       position: absolute;
-      z-index: 100;
+      z-index: 10;
     }
 
     .ticket1,
     .ticket3 {
       height: 452px;
       top: 16px;
+
+    }
+
+    .ticket1 {
+      left: -16px;
     }
 
     .ticket2 {
-      left: 394px;
+      left: 377px;
       top: -14px;
       height: 512px;
     }
 
     .ticket3 {
-      left: 1382px;
+      right: -16px;
     }
   }
 
   .theater-txt {
     background-color: $color-main-r;
-    margin-left: 16px;
-    width: 392px;
+    max-width: 392px;
+    width: pc-vw(392);
+    // width: 392px;
     height: 484px;
     padding: 30px 40px;
 
@@ -75,8 +80,15 @@
   }
 
   .theater-images {
-    width: 990px;
+    // width: 990px;
+    max-width: 990px;
+    width: pc-vw(990);
     height: 484px;
+
+    .swiper-slide>img {
+      object-fit: cover;
+    }
+
 
     .swiper-button-next,
     .swiper-button-prev,
@@ -343,7 +355,20 @@
   }
 }
 
+@media screen and (max-width: 1399px) and (min-width: 1024px) {
+
+  /* 극장 */
+  .main-theater .box .ticket2 {
+    left: pc-vw(376);
+  }
+}
+
 @media screen and (max-width: 1023px) and (min-width: 769px) {
+
+  /* 극장 */
+  .main-theater .box .ticket2 {
+    left: pc-vw(364);
+  }
 
   /* 액티비티 */
   .main-activity {
@@ -373,6 +398,53 @@
   #main {
     .main-desc {
       text-align: center;
+    }
+  }
+
+  /*극장*/
+  .main-theater {
+
+    .ticket1,
+    .ticket2,
+    .ticket3 {
+      display: none;
+    }
+
+    .theater-txt {
+      display: none;
+    }
+
+    .theater-images {
+      max-width: 724px;
+      width: mo-vw(724);
+      height: mo-vw(484);
+
+      .swiper-slide {
+        img {
+          width: 100%;
+          height: 100%;
+        }
+
+        p {
+          color: $color-main-w;
+          font-weight: bold;
+          z-index: 20;
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          bottom: mo-rem(20);
+        }
+      }
+
+
+      .swiper-button-next,
+      .swiper-button-prev {
+        display: inline-block;
+        max-width: 40px;
+        width: mo-vw(40);
+        height: mo-rem(100);
+        color: $color-main-w;
+      }
     }
   }
 
@@ -423,6 +495,7 @@
             width: 32%;
             height: auto;
             padding: mo-rem(16) 0;
+            border: mo-rem(2) solid $color-main-p;
           }
         }
       }
@@ -433,6 +506,10 @@
   .main-event {
     .inner {
       padding: 80px 0;
+    }
+
+    .swiper-wrapper {
+      margin-left: mo-rem(84);
     }
 
     .swiper-slide {
@@ -478,6 +555,7 @@
 
       .btn {
         width: 100%;
+        border-radius: 30px;
 
         &::after {
           width: mo-rem(28);
