@@ -7,6 +7,7 @@ function mainInit() {
   eventFn();
   activityFn();
   theaterImgFn();
+  reservationFn();
 }
 
 function introduceFn() {
@@ -196,4 +197,128 @@ function theaterImgFn() {
       swiper: txtSwiper,
     },
   });
+}
+
+//main1
+function reservationFn() {
+  // 설정
+  const cfg = { time: 2300, w: 360, gap: 20, res: './reservation.html', info: './movieInfo.html' };
+
+  // 데이터
+  const data = {
+    current: [
+      { title: '안나 카레니나', meta: '2025 · 드라마', rating: '★ 8.17', img: './assets/images/main/s1.png', btn: '예매하기' },
+      { title: '오만과 편견', meta: '2025 · 드라마', rating: '★ 8.97', img: './assets/images/main/s2.png', btn: '예매하기' },
+      { title: '피아니스트의 전설', meta: '2025 · 드라마', rating: '★ 9.06', img: './assets/images/main/s3.png', btn: '예매하기' },
+      { title: '듄: 파트2', meta: '2025 · 액션', rating: '★ 8.96', img: './assets/images/main/s4.png', btn: '예매하기' },
+      { title: '찰리와 초콜릿 공장', meta: '2025 · 코미디', rating: '★ 8.69', img: './assets/images/main/s5.png', btn: '예매하기' },
+      { title: '그랜드 부다페스트 호텔', meta: '2025 · 미스터리', rating: '★ 8.71', img: './assets/images/main/s6.png', btn: '예매하기' },
+      { title: '프렌치 디스패치', meta: '2025 · 코미디', rating: '★ 7.89', img: './assets/images/main/s7.png', btn: '예매하기' },
+      { title: '인터스텔라', meta: '2025 · SF', rating: '★ 9.13', img: './assets/images/main/s8.png', btn: '예매하기' }
+    ],
+    upcoming: [
+      { title: '어톤먼트', meta: '2025.11 · 드라마', rating: '개봉예정', img: './assets/images/main/s9.png', btn: '알림신청' },
+      { title: '작은 아씨들', meta: '2025.11 · 드라마', rating: '개봉예정', img: './assets/images/main/s10.png', btn: '알림신청' },
+      { title: '쉰들러 리스트', meta: '2025.12 · 드라마', rating: '개봉예정', img: './assets/images/main/s11.png', btn: '알림신청' },
+      { title: '우주 전쟁', meta: '2025.12 · SF', rating: '개봉예정', img: './assets/images/main/s12.png', btn: '알림신청' },
+      { title: '진주만', meta: '2025.12 · 전쟁', rating: '개봉예정', img: './assets/images/main/s13.png', btn: '알림신청' },
+      { title: '프레스티지', meta: '2025.12 · 스릴러', rating: '개봉예정', img: './assets/images/main/s14.png', btn: '알림신청' },
+      { title: '다크 나이트', meta: '2025.12 · 액션', rating: '개봉예정', img: './assets/images/main/s15.png', btn: '알림신청' },
+      { title: '레옹', meta: '2025.12 · 범죄', rating: '개봉예정', img: './assets/images/main/s16.png', btn: '알림신청' }
+    ]
+  };
+
+  // DOM
+  const w = document.getElementById('sliderWrapper');
+  const cb = document.getElementById('currentBtn');
+  const ub = document.getElementById('upcomingBtn');
+  const pb = document.getElementById('bottomPrevBtn');
+  const nb = document.getElementById('bottomNextBtn');
+  const ab = document.getElementById('pauseBtn');
+  const c = document.querySelector('.slider-container');
+
+  // 상태
+  let t = 'current', p = 0, i = 1, s = false, tm, st = cfg.w + cfg.gap;
+
+  // HTML 생성
+  const h = m => `<div class="movie-card"><img src="${m.img}" alt="${m.title}"><div class="movie-info"><div class="movie-title">${m.title}</div><div class="movie-meta">${m.meta}</div><div class="movie-rating">${m.rating}</div><div class="movie-actions"><button class="info-btn" data-title="${m.title}">ⓘ 영화정보</button><button class="book-btn" data-title="${m.title}">${m.btn} <span class="arrow-icon">→</span></button></div></div></div>`;
+
+  // 렌더
+  const r = () => {
+    const d = data[t];
+    w.innerHTML = [...d, ...d, ...d].map(h).join('');
+    p = d.length * st;
+    i = 1;
+    w.style.transition = 'none';
+    w.style.transform = `translateX(-${p}px)`;
+    setTimeout(() => w.style.transition = 'transform 0.5s ease-in-out', 50);
+    u();
+  };
+
+  // 버튼 업데이트
+  const u = () => ab.innerHTML = innerWidth <= 767 ? `${i} / ${data[t].length}` : (s ? '▶' : '⏸');
+
+  // 이동
+  const m = d => {
+    const dt = data[t];
+    p += st * d;
+    w.style.transform = `translateX(-${p}px)`;
+
+    // index 업데이트
+    i += d;
+    if (i > dt.length) i = 1;
+    if (i < 1) i = dt.length;
+    u();
+
+    setTimeout(() => {
+      if (p >= dt.length * 2 * st || p <= 0) {
+        w.style.transition = 'none';
+        p = dt.length * st;
+        w.style.transform = `translateX(-${p}px)`;
+        // 위치 리셋 시 index는 유지 (이미 순환 처리됨)
+        setTimeout(() => w.style.transition = 'transform 0.5s ease-in-out', 50);
+      }
+    }, 500);
+  };
+
+  // 자동
+  const go = () => tm = setInterval(() => m(1), cfg.time);
+  const x = () => clearInterval(tm);
+  const re = () => { x(); go(); };
+
+  // 탭
+  const sw = n => {
+    t = n;
+    cb.classList.toggle('active', n === 'current');
+    ub.classList.toggle('active', n === 'upcoming');
+    x();
+    r();
+    go();
+  };
+
+  // 이벤트
+  nb.onclick = () => { m(1); !s && re(); };
+  pb.onclick = () => { m(-1); !s && re(); };
+  ab.onclick = () => {
+    if (innerWidth > 767) {
+      s = !s;
+      s ? x() : go();
+      u();
+    }
+  };
+  cb.onclick = () => sw('current');
+  ub.onclick = () => sw('upcoming');
+  c.onmouseenter = () => !s && x();
+  c.onmouseleave = () => !s && go();
+  onresize = u;
+  w.onclick = e => {
+    const b = e.target.closest('.book-btn');
+    const f = e.target.closest('.info-btn');
+    if (b) location.href = `${cfg.res}?movie=${encodeURIComponent(b.dataset.title)}`;
+    if (f) location.href = `${cfg.info}?movie=${encodeURIComponent(f.dataset.title)}`;
+  };
+
+  // 시작
+  r();
+  go();
 }

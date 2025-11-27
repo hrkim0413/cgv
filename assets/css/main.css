@@ -32,6 +32,404 @@ html {
   }
 }
 /* 영화 예매 */
+.main-reservation {
+  /* 지그재그 배치 */
+  /* 슬라이더 하단 숫자/일시정지 버튼 */
+  /* ===========================
+      반응형
+  =========================== */
+}
+.main-reservation .slider-section {
+  margin: 0 auto;
+}
+.main-reservation .section-header {
+  margin-bottom: 30px;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-reservation .section-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.main-reservation .tab-buttons {
+  display: flex;
+  gap: 15px;
+}
+.main-reservation .tab-btn {
+  padding: 12px 30px;
+  border: 2px solid #e50914;
+  background: transparent;
+  color: #242424;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+  border-radius: 29px;
+}
+.main-reservation .tab-btn:hover,
+.main-reservation .tab-btn.active:hover {
+  border-color: #1a1a1a;
+  background-color: #1a1a1a;
+  color: rgb(235, 234, 234);
+}
+.main-reservation .tab-btn.active {
+  background: #e50914;
+  color: white;
+  border-color: #e50914;
+}
+.main-reservation .slider-container {
+  padding: 15px 0;
+  position: relative;
+  overflow: hidden;
+}
+.main-reservation .slider-wrapper {
+  display: flex;
+  gap: 30px;
+  transition: transform 0.5s ease-in-out;
+}
+.main-reservation .movie-card {
+  min-width: 360px;
+  width: 360px;
+  height: 540px;
+  position: relative;
+  border-radius: 26px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s;
+  background-size: cover;
+  background-position: center;
+}
+.main-reservation .movie-card img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+.main-reservation .movie-card:nth-child(odd) {
+  margin-top: 40px;
+}
+.main-reservation .movie-card:nth-child(even) {
+  margin-top: 0px;
+}
+.main-reservation .movie-card:hover {
+  transform: scale(1.05);
+}
+.main-reservation .movie-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.3) 40%, rgba(0, 0, 0, 0) 60%);
+}
+.main-reservation .movie-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0 25px 25px;
+}
+.main-reservation .movie-title {
+  color: #fff;
+  font-size: 21px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.main-reservation .movie-meta {
+  color: #fff;
+  font-size: 18px;
+  opacity: 0.8;
+  margin-bottom: 15px;
+}
+.main-reservation .movie-rating {
+  display: inline-block;
+  background: #e50914;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.main-reservation .movie-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.main-reservation .info-btn,
+.main-reservation .book-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  border-radius: 25px;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+  padding: 10px 20px;
+}
+.main-reservation .info-btn {
+  background: #fff;
+  color: #0a0a0a;
+}
+.main-reservation .info-btn:hover {
+  background: #f56009;
+  color: #fafafa;
+  transform: translateY(-2px);
+}
+.main-reservation .book-btn {
+  background: #FFE665;
+  color: #0a0a0a;
+  gap: 8px;
+}
+.main-reservation .book-btn:hover {
+  background: #f56009;
+  color: #fafafa;
+  transform: translateY(-2px);
+}
+.main-reservation .arrow-icon {
+  font-size: 16px;
+  transform: rotate(-45deg);
+}
+.main-reservation .slider-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  position: relative;
+  width: 100%;
+}
+.main-reservation .slider-dots::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 10px;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 3px;
+  background: linear-gradient(to right, #e50914 0%, rgba(229, 9, 20, 0.5) 100%);
+  margin-right: 400px;
+}
+.main-reservation .control-buttons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  position: absolute;
+  right: calc(50% - 600px + 20px);
+  top: -10px;
+  z-index: 1;
+}
+.main-reservation .control-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: #e50914;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-reservation .control-btn:hover {
+  background: #f40612;
+  transform: scale(1.1);
+}
+.main-reservation #pauseBtn {
+  background: none;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  background: #e50914;
+}
+@media (max-width: 1199px) {
+  .main-reservation .section-title {
+    font-size: 24px;
+  }
+  .main-reservation .tab-btn {
+    padding: 10px 25px;
+    font-size: 18px;
+  }
+  .main-reservation .slider-wrapper {
+    gap: 20px;
+  }
+  .main-reservation .movie-card {
+    min-width: 300px;
+    width: 300px;
+    height: 450px;
+  }
+  .main-reservation .movie-card:nth-child(odd) {
+    margin-top: 30px;
+  }
+  .main-reservation .movie-title {
+    font-size: 19px;
+  }
+  .main-reservation .movie-meta {
+    font-size: 16px;
+  }
+  .main-reservation .info-btn,
+  .main-reservation .book-btn {
+    padding: 8px 16px;
+    font-size: 17px;
+  }
+  .main-reservation .slider-dots::before {
+    width: 600px;
+    margin-right: 300px;
+  }
+  .main-reservation .control-buttons {
+    right: calc(50% - 450px + 20px);
+  }
+  .main-reservation .control-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 767px) {
+  .main-reservation .section-header {
+    margin-bottom: 20px;
+  }
+  .main-reservation .section-title {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+  .main-reservation .tab-buttons {
+    gap: 10px;
+  }
+  .main-reservation .tab-btn {
+    padding: 8px 20px;
+    font-size: 16px;
+    border-radius: 20px;
+  }
+  .main-reservation .slider-container {
+    padding: 10px 0;
+  }
+  .main-reservation .slider-wrapper {
+    gap: 15px;
+  }
+  .main-reservation .movie-card {
+    min-width: 280px;
+    width: 280px;
+    height: 420px;
+    border-radius: 20px;
+  }
+  .main-reservation .movie-card:nth-child(odd),
+  .main-reservation .movie-card:nth-child(even) {
+    margin-top: 0;
+  }
+  .main-reservation .movie-card:hover {
+    transform: scale(1.02);
+  }
+  .main-reservation .movie-info {
+    padding: 0 20px 20px;
+  }
+  .main-reservation .movie-title {
+    font-size: 18px;
+    margin-bottom: 4px;
+  }
+  .main-reservation .movie-meta {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  .main-reservation .movie-rating {
+    font-size: 12px;
+    padding: 3px 8px;
+    margin-bottom: 10px;
+  }
+  .main-reservation .movie-actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .main-reservation .info-btn,
+  .main-reservation .book-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 10px 15px;
+    font-size: 16px;
+  }
+  .main-reservation .arrow-icon {
+    font-size: 14px;
+  }
+  .main-reservation .slider-dots {
+    margin-top: 30px;
+  }
+  .main-reservation .slider-dots::before {
+    display: none;
+  }
+  .main-reservation .control-buttons {
+    position: static;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+  }
+  .main-reservation #pauseBtn {
+    border-radius: 25px !important;
+    /* 기존 50%를 덮어쓰기 */
+    font-size: 18px;
+    color: #fff;
+    background: #e50914;
+    width: 95px;
+    height: 44px;
+  }
+  .main-reservation .control-btn {
+    width: 44px;
+    height: 44px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 480px) {
+  .main-reservation .section-title {
+    font-size: 20px;
+  }
+  .main-reservation .tab-btn {
+    margin-bottom: 10px;
+    padding: 6px 15px;
+    font-size: 20px;
+  }
+  .main-reservation .movie-card {
+    min-width: 260px;
+    width: 260px;
+    height: 390px;
+  }
+  .main-reservation .movie-title {
+    font-size: 16px;
+  }
+  .main-reservation .movie-meta {
+    font-size: 13px;
+  }
+  .main-reservation .info-btn,
+  .main-reservation .book-btn {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+  .main-reservation .slider-dots::before {
+    display: none;
+  }
+  .main-reservation #pauseBtn {
+    border-radius: 25px !important;
+    /* 기존 50%를 덮어쓰기 */
+    font-size: 18px;
+    color: #fff;
+    background: #e50914;
+    width: 95px;
+    height: 44px;
+  }
+  .main-reservation .control-btn {
+    width: 44px;
+    height: 44px;
+    font-size: 14px;
+  }
+}
+
 /* 극장 */
 .main-theater {
   position: relative;
