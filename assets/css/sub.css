@@ -422,6 +422,108 @@ html {
   gap: 10px;
 }
 
+/*시사회 & 전시회*/
+#preview {
+  background-color: #242424;
+}
+#preview .pre-section .inner {
+  background: url("../images/sub/previewbg.png") no-repeat center;
+}
+#preview .pre-section .inner .box {
+  max-width: 1030px;
+  width: 73.5714285714vw;
+  position: relative;
+  margin: 0 auto;
+}
+#preview .pre-section .inner .box > h2 {
+  border-bottom: 1px solid #242424;
+}
+#preview .pre-section .inner .box > p {
+  border-bottom: 1px solid #242424;
+}
+#preview .pre-section .inner .btns {
+  text-align: center;
+  padding: 60px 0px;
+}
+#preview .pre-section .inner .btns input[type=radio] {
+  display: none;
+}
+#preview .pre-section .inner .btns label[for=preview_btn] {
+  margin-right: 20px;
+}
+#preview .pre-section .inner .pre_con,
+#preview .pre-section .inner .greet_con {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px 0px;
+  padding: 20px 0;
+}
+#preview .pre-section .inner .pre_con li:nth-child(4n+1),
+#preview .pre-section .inner .greet_con li:nth-child(4n+3) {
+  transform: rotate(-5deg);
+}
+#preview .pre-section .inner .pre_con li:nth-child(4n+3),
+#preview .pre-section .inner .greet_con li:nth-child(4n+1) {
+  transform: rotate(5deg);
+}
+#preview .pre-section .inner .card {
+  background-color: #242424;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+  margin-bottom: 50px;
+  max-width: 570px;
+  width: 40.7142857143vw;
+  height: 350px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#preview .pre-section .inner .card img {
+  max-width: 300px;
+  width: 21.4285714286vw;
+  margin: 25px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10%;
+}
+#preview .pre-section .inner .card figcaption {
+  position: relative;
+  display: block;
+  color: #fff;
+  max-width: 300px;
+  width: 21.4285714286vw;
+  height: 260px;
+  transform: translate(260px, -340px);
+}
+#preview .pre-section .inner .card figcaption .txt-wrap,
+#preview .pre-section .inner .card figcaption span,
+#preview .pre-section .inner .card figcaption p {
+  position: absolute;
+}
+#preview .pre-section .inner .card figcaption .txt-wrap {
+  top: 80px;
+}
+#preview .pre-section .inner .card figcaption .txt-wrap .title {
+  font-size: 60px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+#preview .pre-section .inner .card figcaption .txt-wrap h4 {
+  text-indent: 16px;
+}
+#preview .pre-section .inner .card figcaption .txt-wrap p {
+  width: 200px;
+  left: 16px;
+}
+#preview .pre-section .inner .card figcaption .type {
+  right: 0px;
+}
+#preview .pre-section .inner .card figcaption .day {
+  transform: rotate(90deg);
+  right: -80px;
+  top: 140px;
+}
+
 @media screen and (max-width: 768px) {
   /* 장바구니 cart.php */
   #cart .cart-con {

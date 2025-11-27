@@ -421,6 +421,142 @@
   }
 }
 
+/*시사회 & 전시회*/
+#preview {
+  //배경색 넣기
+  background-color: $color-main-dg;
+
+  .pre-section {
+    .inner {
+      //배경이미지 넣기
+      background: url('../images/sub/previewbg.png') no-repeat center;
+
+      .box {
+        //배경가운데로
+        max-width: 1030px;
+        width: pc-vw(1030);
+        position: relative;
+        margin: 0 auto;
+
+        >h2 {
+          //시사회무대인사
+          border-bottom: 1px solid $color-main-dg;
+        }
+
+        >p {
+          //시사회도 CGV에서~
+          border-bottom: 1px solid $color-main-dg;
+        }
+      }
+
+      .btns {
+        //버튼서식
+        text-align: center;
+        padding: 60px 0px;
+
+        input[type=radio] {
+          //라디오숨기기
+          display: none;
+        }
+
+        label[for="preview_btn"] {
+          //간격주기
+          margin-right: 20px;
+        }
+      }
+
+      .pre_con,
+      .greet_con {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px 0px; //카드 간격
+        padding: 20px 0;
+      }
+
+      //기울기 주기
+      .pre_con li:nth-child(4n + 1),
+      .greet_con li:nth-child(4n + 3) {
+        transform: rotate(-5deg);
+      }
+
+      .pre_con li:nth-child(4n + 3),
+      .greet_con li:nth-child(4n + 1) {
+        transform: rotate(5deg);
+      }
+
+      //카드형식
+      .card {
+        background-color: $color-main-dg;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+        margin-bottom: 50px;
+
+        max-width: 570px;
+        width: pc-vw(570);
+        height: 350px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        img {
+          max-width: 300px;
+          width: pc-vw(300);
+          margin: 25px;
+          object-fit: cover;
+          border-radius: 10%;
+        }
+
+        figcaption {
+          position: relative;
+          display: block;
+          color: $color-main-w;
+          max-width: 300px;
+          width: pc-vw(300);
+          height: 260px;
+          transform: translate(260px, -340px);
+
+          .txt-wrap,
+          span,
+          p {
+            position: absolute;
+          }
+
+          .txt-wrap {
+            top: 80px;
+
+            .title {
+              font-size: 60px;
+              font-weight: bold;
+              margin-bottom: 20px;
+            }
+
+            h4 {
+              text-indent: 16px;
+            }
+
+            p {
+              width: 200px;
+              left: 16px;
+            }
+          }
+
+          .type {
+            right: 0px;
+          }
+
+          .day {
+            transform: rotate(90deg);
+            right: -80px;
+            top: 140px;
+
+          }
+        }
+
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 1023px) and (min-width: 769px) {}
 
 @media screen and (max-width: 768px) {
