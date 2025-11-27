@@ -200,7 +200,6 @@
             <li>
               <img src="./assets/images/main/activity-s04.png" alt="만화천국">
               <p>만화천국</p>
-              <!-- 테스트 -->
             </li>
           </ul>
         </div>
