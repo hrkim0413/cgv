@@ -11,11 +11,11 @@
 - 메인                          index.php               > 혜련, 진영, 서현
 - 장바구니                      cart.php                > 혜련
 - 회원가입                      join.php                > 혜련
-- 로그인                        login.php               > 진영(퍼블), 혜련(php)
-- 영화 예매                     reservation/index.php   > 
+- 로그인                        login.php               > 혜련
+- 이벤트/혜택 > 시사회/무대인사  event/preview.php       > 서현
 - 극장 > 전체극장               theater/search.php      > 혜련
-- 영화 소개                     introduce/index.php     > 진영 or 서현, 혜련(js)
-- 이벤트/혜택 > 시사회/무대인사  event/preview.php       > 진영 or 서현
+- 영화 예매                     reservation/index.php   > 
+- 영화 소개                     introduce/index.php     > 진영, 혜련(js)
 ---------------------------------------------------------------------------------------------------------
 - 관리자 > 로그인               admin/login.php         > '로그인' 페이지만 동일하게 사용
 - 관리자 > 영화 리스트          admin/movie-list.php    > 

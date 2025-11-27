@@ -176,9 +176,12 @@
   }
 }
 
-/* 회원가입 join.php */
-#join {
-  .join-con {
+/* 회원가입 join.php, 로그인 login.php */
+#join,
+#login {
+
+  .join-con,
+  .login-con {
     .main-title {
       text-align: center;
     }
@@ -244,7 +247,7 @@
       }
     }
 
-    .btn-join {
+    .btn2 {
       font-family: "NanumSquareRound", "Nanum Gothic", sans-serif;
       font-size: $fs-nav;
       border: none;
@@ -268,6 +271,151 @@
 
       .btn-id {
         width: 222px;
+      }
+    }
+  }
+}
+
+#login {
+  .join-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+      display: block;
+      position: relative;
+      margin: 0 10px;
+      color: $color-main-g;
+
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -10px;
+        width: 1px;
+        height: 100%;
+        background: $color-main-g;
+      }
+
+      &:last-child::after {
+        display: none;
+      }
+    }
+  }
+}
+
+/* 극장 > 전체극장 theater-search.php */
+#theater-search {
+  position: relative;
+
+  .ts-con {
+
+    .bg {
+      width: 100%;
+      height: 100vh;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    form {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100vh;
+      background: $color-main-w;
+    }
+
+    .title-box {
+      padding: 60px 30px;
+
+      p {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+
+      select,
+      input {
+        width: 100%;
+        padding: 16px 28px;
+        border: 1px solid $color-main-r;
+        border-radius: 45px;
+        font-size: 1rem;
+      }
+
+      input[type="submit"] {
+        width: 105px;
+        margin-left: 15px;
+        border: none;
+        border-radius: 24px;
+        font-family: "NanumSquareRound", "Nanum Gothic", sans-serif;
+        font-size: 1.375rem;
+        transition: 0.3s;
+        cursor: pointer;
+      }
+
+      option {
+        font-size: 1rem;
+      }
+    }
+
+    .list-box {
+      overflow-y: scroll;
+      height: calc(100vh - 332px);
+
+      .list-title {
+        padding: 20px 30px;
+        background: $color-main-bk;
+        color: $color-main-w;
+        font-size: $fs-basic-big;
+      }
+
+      .list {
+        >li {
+          padding: 30px 30px;
+          background: $color-main-lg;
+          border-bottom: 1px solid $color-main-g;
+
+          &:nth-child(even) {
+            background: $color-main-w;
+          }
+        }
+      }
+
+      h4 {
+        margin-bottom: 10px;
+        font-size: $fs-basic-big;
+        font-weight: bold;
+      }
+
+      p {
+        margin-bottom: 40px;
+      }
+
+      .item {
+        display: flex;
+        gap: 10px;
+
+        li {}
+
+        a {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+        }
       }
     }
   }
@@ -348,9 +496,12 @@
     }
   }
 
-  /* 회원가입 join.php */
-  #join {
-    .join-con {
+  /* 회원가입 join.php, 로그인 login.php */
+  #join,
+  #login {
+
+    .join-con,
+    .login-con {
       form {
         max-width: 640px;
         width: 100%;
@@ -400,6 +551,78 @@
       }
     }
   }
+
+  /* 극장 > 전체극장 theater-search.php */
+  #theater-search {
+    .ts-con {
+      .bg {
+        position: absolute;
+        top: 390px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: mo-vw(400);
+      }
+
+      form {
+        position: static;
+        height: auto;
+      }
+
+      .title-box {
+        margin-bottom: mo-vw(400);
+        padding: mo-rem(60) mo-rem(20);
+
+        input[type="search"] {
+          width: calc(100% - 15px - mo-vw(180));
+        }
+
+        input[type="submit"] {
+          width: mo-vw(180);
+          padding: 16px 10px;
+          border-radius: 40px;
+        }
+      }
+
+      .list-box {
+        height: auto;
+
+        .list-title {
+          padding: mo-rem(30) mo-rem(40);
+        }
+
+        .list {
+          >li {
+            padding: mo-rem(30) mo-rem(40);
+          }
+        }
+
+        p {
+          margin-bottom: mo-rem(60);
+          line-height: 1.4;
+        }
+
+        .item {
+          a {
+            width: mo-vw(100);
+          }
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 620px) {
+
+  /* 극장 > 전체극장 theater-search.php */
+  #theater-search {
+    .ts-con .bg {
+      top: 310px;
+    }
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -416,6 +639,13 @@
 
     .cart-con .movies dd {
       width: calc(100% - 70px);
+    }
+  }
+
+  /* 극장 > 전체극장 theater-search.php */
+  #theater-search {
+    .ts-con .bg {
+      top: 230px;
     }
   }
 }
