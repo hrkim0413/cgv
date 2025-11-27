@@ -254,6 +254,7 @@
       </div>
     </section>
   </main>
+  <!-- 테스트 -->
 
   <!-- footer -->
   <?php include('./assets/inc/footer.php');?>
