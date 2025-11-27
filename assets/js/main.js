@@ -171,20 +171,20 @@ function activityFn() {
 
 function theaterImgFn() {
   let txtSwiper = new Swiper(".theater-txt", {
-    // autoplay: {
-    //   delay: 2500,
-    //   disableOnInteraction: false,
-    // },
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
     slidesPerView: 13,
     direction: "vertical",
   });
 
   let imgSwiper = new Swiper(".theater-images", {
 
-    // autoplay: {
-    //   delay: 2500,
-    //   disableOnInteraction: false,
-    // },
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
     pagination: {
       el: ".theater-images .swiper-pagination",
       clickable: true,

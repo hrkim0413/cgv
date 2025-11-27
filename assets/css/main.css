@@ -444,32 +444,33 @@ html {
   color: #fff;
 }
 .main-theater .box {
-  width: 1400px;
-  height: 516px;
   position: relative;
   display: flex;
 }
-.main-theater .box img {
+.main-theater .box > img {
   position: absolute;
-  z-index: 100;
+  z-index: 10;
 }
 .main-theater .box .ticket1,
 .main-theater .box .ticket3 {
   height: 452px;
   top: 16px;
 }
+.main-theater .box .ticket1 {
+  left: -16px;
+}
 .main-theater .box .ticket2 {
-  left: 394px;
+  left: 377px;
   top: -14px;
   height: 512px;
 }
 .main-theater .box .ticket3 {
-  left: 1382px;
+  right: -16px;
 }
 .main-theater .theater-txt {
   background-color: #ED0E02;
-  margin-left: 16px;
-  width: 392px;
+  max-width: 392px;
+  width: 28vw;
   height: 484px;
   padding: 30px 40px;
 }
@@ -487,8 +488,13 @@ html {
   font-size: 20px;
 }
 .main-theater .theater-images {
-  width: 990px;
+  max-width: 990px;
+  width: 70.7142857143vw;
   height: 484px;
+}
+.main-theater .theater-images .swiper-slide > img {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .main-theater .theater-images .swiper-button-next,
 .main-theater .theater-images .swiper-button-prev,
@@ -708,7 +714,17 @@ html {
   border-color: #ED0E02;
 }
 
+@media screen and (max-width: 1399px) and (min-width: 1024px) {
+  /* 극장 */
+  .main-theater .box .ticket2 {
+    left: 26.8571428571vw;
+  }
+}
 @media screen and (max-width: 1023px) and (min-width: 769px) {
+  /* 극장 */
+  .main-theater .box .ticket2 {
+    left: 26vw;
+  }
   /* 액티비티 */
   .main-activity .big-box .btns {
     flex-wrap: wrap;
@@ -724,6 +740,41 @@ html {
   /* 공통 */
   #main .main-desc {
     text-align: center;
+  }
+  /*극장*/
+  .main-theater .ticket1,
+  .main-theater .ticket2,
+  .main-theater .ticket3 {
+    display: none;
+  }
+  .main-theater .theater-txt {
+    display: none;
+  }
+  .main-theater .theater-images {
+    max-width: 724px;
+    width: 94.2708333333vw;
+    height: 63.0208333333vw;
+  }
+  .main-theater .theater-images .swiper-slide img {
+    width: 100%;
+    height: 100%;
+  }
+  .main-theater .theater-images .swiper-slide p {
+    color: #fff;
+    font-weight: bold;
+    z-index: 20;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0.625rem;
+  }
+  .main-theater .theater-images .swiper-button-next,
+  .main-theater .theater-images .swiper-button-prev {
+    display: inline-block;
+    max-width: 40px;
+    width: 5.2083333333vw;
+    height: 3.125rem;
+    color: #fff;
   }
   /* 영화 소개 */
   .main-introduce {
@@ -766,10 +817,14 @@ html {
     width: 32%;
     height: auto;
     padding: 0.5rem 0;
+    border: 0.0625rem solid #D78BF9;
   }
   /* 이벤트/혜택 */
   .main-event .inner {
     padding: 80px 0;
+  }
+  .main-event .swiper-wrapper {
+    margin-left: 2.625rem;
   }
   .main-event .swiper-slide {
     width: 78%;
@@ -805,6 +860,7 @@ html {
   }
   .main-activity .big-box .btn {
     width: 100%;
+    border-radius: 30px;
   }
   .main-activity .big-box .btn::after {
     width: 0.875rem;
