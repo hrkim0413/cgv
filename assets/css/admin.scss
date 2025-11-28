@@ -1,0 +1,16 @@
+@charset "uft-8";
+
+@use 'base' as *;
+
+header.admin {
+  background: $color-main-bk;
+
+  .top-menu .btn-hd-login {
+    background: $color-main-r;
+    color: $color-main-w;
+
+    &:hover {
+      background: $color-main-lr;
+    }
+  }
+}

@@ -16,44 +16,46 @@ function isMobile() {
 }
 
 function headerFn() {
-  isMobile();
+  if (!(document.querySelector('header').classList.contains('admin'))) {
+    isMobile();
 
-  const header = document.querySelector('header');
-  const nav = document.querySelector('nav');
-  const body = document.querySelector('body')
-  const menuBtn = document.querySelector('header .mo-menu-btn');
-  const closeBtn = document.querySelector('nav .btn-close');
-  const gnbLi = document.querySelectorAll('.gnb > li');
+    const header = document.querySelector('header');
+    const nav = document.querySelector('nav');
+    const body = document.querySelector('body')
+    const menuBtn = document.querySelector('header .mo-menu-btn');
+    const closeBtn = document.querySelector('nav .btn-close');
+    const gnbLi = document.querySelectorAll('.gnb > li');
 
-  if (isMobile()) {
-    // mo
-    menuBtn.addEventListener('click', function () {
-      nav.classList.add('act');
-      body.style.overflow = 'hidden';
-    })
-    closeBtn.addEventListener('click', function () {
-      nav.classList.remove('act');
-      body.style.overflow = 'auto';
-    })
-
-    gnbLi.forEach((item) => {
-      item.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        gnbLi.forEach((it) => {
-          it.classList.remove('act');
-        })
-
-        this.classList.add('act');
+    if (isMobile()) {
+      // mo
+      menuBtn.addEventListener('click', function () {
+        nav.classList.add('act');
+        body.style.overflow = 'hidden';
       })
-    })
-  } else {
-    // pc
-    header.addEventListener('mouseenter', function () {
-      header.classList.add('act');
-    })
-    header.addEventListener('mouseleave', function () {
-      header.classList.remove('act');
-    })
+      closeBtn.addEventListener('click', function () {
+        nav.classList.remove('act');
+        body.style.overflow = 'auto';
+      })
+
+      gnbLi.forEach((item) => {
+        item.addEventListener('click', function (e) {
+          e.preventDefault();
+
+          gnbLi.forEach((it) => {
+            it.classList.remove('act');
+          })
+
+          this.classList.add('act');
+        })
+      })
+    } else {
+      // pc
+      header.addEventListener('mouseenter', function () {
+        header.classList.add('act');
+      })
+      header.addEventListener('mouseleave', function () {
+        header.classList.remove('act');
+      })
+    }
   }
 }
