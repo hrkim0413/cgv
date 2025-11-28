@@ -596,20 +596,27 @@ html {
   transition: 0.3s;
 }
 #reservation .rv-con .rv-area {
+  max-width: 918px;
   width: 65.5714285714vw;
 }
 #reservation .rv-con .movie-box {
+  overflow-y: auto;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 20px;
+  padding: 50px 18px;
   background: radial-gradient(#8A8A8A, #242424);
 }
 #reservation .rv-con .movie-box input {
   display: none;
 }
+#reservation .rv-con .movie-box label {
+  box-shadow: none;
+}
 #reservation .rv-con .movie-box img {
-  border: 2px solid transparent;
+  border: 3px solid transparent;
+  border-radius: 8px;
   transition: 0.3s;
 }
 #reservation .rv-con .movie-box p {
@@ -620,22 +627,31 @@ html {
 }
 #reservation .rv-con .rv-title {
   display: block;
+  padding: 14px 18px;
   background: #F4F4F4;
 }
-#reservation .rv-con .rv-title2 {
-  display: inline-block;
-  background: #121212;
-  color: #fff;
-}
-#reservation .rv-con .date-box .date {
+#reservation .rv-con .common-box > ul {
+  overflow-y: auto;
   display: flex;
-  gap: 16px;
+  gap: 26px;
+  padding: 20px 18px;
 }
-#reservation .rv-con .date-box li {
+#reservation .rv-con .common-box li {
   text-align: center;
 }
-#reservation .rv-con .date-box input {
+#reservation .rv-con .common-box input {
   display: none;
+}
+#reservation .rv-con .common-box label {
+  padding: 16px 18px;
+  line-height: 1.4;
+}
+#reservation .rv-con .common-box input:checked + label {
+  background: #FC5555;
+  color: #fff;
+}
+#reservation .rv-con .date-box label {
+  padding: 10px;
 }
 #reservation .rv-con .date-box span {
   display: block;
@@ -646,61 +662,48 @@ html {
 #reservation .rv-con .date-box span.red {
   color: #FF6767;
 }
-#reservation .rv-con .date-box input:checked + label {
-  background: #FC5555;
-}
-#reservation .rv-con .theater-box .theater {
-  display: flex;
-  gap: 26px;
-}
-#reservation .rv-con .theater-box input {
-  display: none;
-}
-#reservation .rv-con .theater-box input:checked + label {
-  background: #FC5555;
-}
-#reservation .rv-con .hall-box .hall {
-  display: flex;
-  gap: 26px;
-}
-#reservation .rv-con .hall-box li {
-  text-align: center;
-}
-#reservation .rv-con .hall-box input {
-  display: none;
-}
-#reservation .rv-con .hall-box input:checked + label {
-  background: #FC5555;
-}
-#reservation .rv-con .hall-box span {
-  display: block;
-}
 #reservation .rv-con .info-area {
+  min-width: calc(100% - 918px);
   width: calc(100% - 65.5714285714vw);
   background: #121212;
 }
 #reservation .rv-con .info-box {
-  width: 226px;
+  width: 200px;
   margin: auto;
   padding: 80px 0;
 }
 #reservation .rv-con .info-box .img {
-  margin: auto;
+  margin: 0 auto 20px;
+}
+#reservation .rv-con .info-box .img img {
+  width: 100%;
 }
 #reservation .rv-con .info-box span {
   display: block;
+  margin-bottom: 20px;
   color: #fff;
+  font-size: 1.25rem;
   text-align: center;
 }
 #reservation .rv-con .info-box dl {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  margin-bottom: 20px;
   color: #fff;
+}
+#reservation .rv-con .info-box dt,
+#reservation .rv-con .info-box dd {
+  margin-bottom: 10px;
+}
+#reservation .rv-con .info-box dt:last-of-type,
+#reservation .rv-con .info-box dd:last-of-type {
+  margin-bottom: 0;
 }
 #reservation .rv-con .info-box dt {
   width: 60px;
+  color: #A7A7A7;
 }
 #reservation .rv-con .info-box dd {
   width: calc(100% - 60px);
@@ -1008,6 +1011,58 @@ html {
   }
   #theater-search .ts-con .list-box .item img {
     width: 100%;
+  }
+  /* 영화 예매 */
+  #reservation .rv-con form {
+    display: block;
+  }
+  #reservation .rv-con .rv-area {
+    max-width: none;
+    width: 100%;
+  }
+  #reservation .rv-con .movie-box {
+    gap: 1.875rem;
+    padding: 1.875rem 0.9375rem;
+  }
+  #reservation .rv-con .movie-box label {
+    width: 24.7395833333vw;
+  }
+  #reservation .rv-con .movie-box img {
+    width: 100%;
+  }
+  #reservation .rv-con .movie-box p {
+    white-space: nowrap;
+  }
+  #reservation .rv-con .rv-title {
+    padding: 0.9375rem 0.9375rem;
+  }
+  #reservation .rv-con .common-box > ul {
+    padding: 0.9375rem 0.9375rem;
+  }
+  #reservation .rv-con .info-area {
+    max-width: none;
+    width: 100%;
+  }
+  #reservation .rv-con .info-box {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9375rem;
+    width: 100%;
+    padding: 1.875rem 0.9375rem;
+  }
+  #reservation .rv-con .info-box .img {
+    width: 33.8541666667vw;
+    margin-bottom: 0;
+  }
+  #reservation .rv-con .info-box .txt {
+    width: calc(100% - 0.9375rem - 33.8541666667vw);
+  }
+  #reservation .rv-con .info-box dt {
+    width: 15.625vw;
+  }
+  #reservation .rv-con .info-box dd {
+    width: calc(100% - 15.625vw);
   }
 }
 @media screen and (max-width: 768px) and (max-width: 620px) {

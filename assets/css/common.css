@@ -60,6 +60,14 @@ a {
   transition: 0.3s;
 }
 
+input,
+select,
+option,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
 /* 공통 */
 .pc-show {
   display: block !important;

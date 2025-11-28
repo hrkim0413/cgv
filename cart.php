@@ -36,11 +36,11 @@
               <div class="txt-box">
                 <strong class="m-tit">주토피아</strong>
                 <dl>
-                  <dt>극장</dt>
-                  <dd>CGV강남</dd>
-                  <dt>상영관</dt>
-                  <dd>4DX 1관</dd>
-                  <dt>날짜</dt>
+                  <dt>상영등급</dt>
+                  <dd>전체관람가</dd>
+                  <dt>상영극장</dt>
+                  <dd>강남점</dd>
+                  <dt>상영날짜</dt>
                   <dd>2025.12.12 금</dd>
                   <dt>상영시간</dt>
                   <dd>오전 10:25</dd>

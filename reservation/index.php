@@ -31,7 +31,7 @@
           <div class="rv-area">
             <ul class="movie-box">
               <li>
-                <input type="radio" name="rd1" id="m01" required>
+                <input type="radio" name="rd1" id="m01">
                 <label for="m01">
                   <img src="../assets/images/sub/rv-movie01.png" alt="주토피아">
                   <p>주토피아</p>
@@ -39,7 +39,7 @@
               </li>
 
               <li>
-                <input type="radio" name="rd1" id="m02" required>
+                <input type="radio" name="rd1" id="m02">
                 <label for="m02">
                   <img src="../assets/images/sub/rv-movie01.png" alt="위키드 포굿">
                   <p>위키드 포굿</p>
@@ -47,7 +47,7 @@
               </li>
 
               <li>
-                <input type="radio" name="rd1" id="m03" required>
+                <input type="radio" name="rd1" id="m03">
                 <label for="m03">
                   <img src="../assets/images/sub/rv-movie01.png" alt="나우 유 씨 미3">
                   <p>나우 유 씨 미3</p>
@@ -55,7 +55,7 @@
               </li>
 
               <li>
-                <input type="radio" name="rd1" id="m04" required>
+                <input type="radio" name="rd1" id="m04">
                 <label for="m04">
                   <img src="../assets/images/sub/rv-movie01.png" alt="정보원">
                   <p>정보원</p>
@@ -63,7 +63,7 @@
               </li>
 
               <li>
-                <input type="radio" name="rd1" id="m05" required>
+                <input type="radio" name="rd1" id="m05">
                 <label for="m05">
                   <img src="../assets/images/sub/rv-movie01.png" alt="국보">
                   <p>국보</p>
@@ -71,67 +71,85 @@
               </li>
             </ul>
 
-            <div class="date-box">
-              <strong class="rv-title">날짜</strong>
+            <div class="common-box theater-box">
+              <strong class="rv-title">상영극장</strong>
+              <ul class="theater">
+                <li>
+                  <input type="radio" name="m_t" id="t01">
+                  <label for="t01">강남점</label>
+                </li>
+                <li>
+                  <input type="radio" name="m_t" id="t02">
+                  <label for="t02">용산아이파크몰</label>
+                </li>
+                <li>
+                  <input type="radio" name="m_t" id="t03">
+                  <label for="t03">명동점</label>
+                </li>
+              </ul>
+            </div>
+
+            <div class="common-box date-box">
+              <strong class="rv-title">상영날짜</strong>
               <ul class="date">
                 <li>
-                  <input type="radio" name="rd2" id="d01">
+                  <input type="radio" name="m_d" id="d01">
                   <label for="d01">
                     <span>수</span>
                     12/10
                   </label>
                 </li>
                 <li>
-                  <input type="radio" name="rd2" id="d02">
+                  <input type="radio" name="m_d" id="d02">
                   <label for="d02">
                     <span>목</span>
                     12/11
                   </label>
                 </li>
                 <li>
-                  <input type="radio" name="rd2" id="d03">
+                  <input type="radio" name="m_d" id="d03">
                   <label for="d03">
                     <span>금</span>
                     12/12
                   </label>
                 </li>
                 <li>
-                  <input type="radio" name="rd2" id="d04">
+                  <input type="radio" name="m_d" id="d04">
                   <label for="d04">
                     <span class="blue">토</span>
                     12/13
                   </label>
                 </li>
                 <li>
-                  <input type="radio" name="rd2" id="d05">
+                  <input type="radio" name="m_d" id="d05">
                   <label for="d05">
                     <span class="red">일</span>
                     12/14
                   </label>
                 </li>
                 <li>
-                  <input type="radio" name="rd2" id="d06">
+                  <input type="radio" name="m_d" id="d06">
                   <label for="d06">
                     <span>월</span>
                     12/15
                   </label>
                 </li>
                 <li>
-                  <input type="radio" name="rd2" id="d07">
+                  <input type="radio" name="m_d" id="d07">
                   <label for="d07">
                     <span>화</span>
                     12/16
                   </label>
                 </li>
                 <li>
-                  <input type="radio" name="rd2" id="d08">
+                  <input type="radio" name="m_d" id="d08">
                   <label for="d08">
                     <span>수</span>
                     12/17
                   </label>
                 </li>
                 <li>
-                  <input type="radio" name="rd2" id="d09">
+                  <input type="radio" name="m_d" id="d09">
                   <label for="d09">
                     <span>목</span>
                     12/18
@@ -140,46 +158,55 @@
               </ul>
             </div>
 
-            <div class="theater-box">
-              <strong class="rv-title">극장</strong>
-              <ul class="theater">
+            <div class="common-box hour-box">
+              <strong class="rv-title">상영시간</strong>
+              <ul class="hour">
                 <li>
-                  <input type="radio" name="rd3" id="t01">
-                  <label for="t01">강남점</label>
+                  <input type="radio" name="m_h" id="h01">
+                  <label for="h01">
+                    10:25~12:20
+                  </label>
                 </li>
                 <li>
-                  <input type="radio" name="rd3" id="t02">
-                  <label for="t02">용산아이파크몰</label>
+                  <input type="radio" name="m_h" id="h02">
+                  <label for="h02">
+                    13:25~15:20
+                  </label>
                 </li>
                 <li>
-                  <input type="radio" name="rd3" id="t03">
-                  <label for="t03">명동점</label>
+                  <input type="radio" name="m_h" id="h03">
+                  <label for="h03">
+                    16:25~18:20
+                  </label>
                 </li>
               </ul>
             </div>
 
-            <div class="hall-box">
-              <strong class="rv-title2">4DX관</strong>
-              <ul class="hall">
+            <div class="common-box people-box">
+              <strong class="rv-title">인원</strong>
+              <ul class="people">
                 <li>
-                  <input type="radio" name="rd4" id="h01">
-                  <label for="h01">
-                    10:25~12:20
-                    <span>84/122석</span>
+                  <input type="radio" name="m_p" id="p01">
+                  <label for="p01">
+                    일반 1인
                   </label>
                 </li>
                 <li>
-                  <input type="radio" name="rd4" id="h02">
-                  <label for="h02">
-                    13:25~15:20
-                    <span>92/122석</span>
+                  <input type="radio" name="m_p" id="p02">
+                  <label for="p02">
+                    일반 2인
                   </label>
                 </li>
                 <li>
-                  <input type="radio" name="rd4" id="h03">
-                  <label for="h03">
-                    16:25~18:20
-                    <span>75/122석</span>
+                  <input type="radio" name="m_p" id="p03">
+                  <label for="p03">
+                    일반 3인
+                  </label>
+                </li>
+                <li>
+                  <input type="radio" name="m_p" id="p03">
+                  <label for="p03">
+                    일반 4인
                   </label>
                 </li>
               </ul>
@@ -195,16 +222,16 @@
               <div class="txt">
                 <span>주토피아</span>
                 <dl>
-                  <dt>극장</dt>
-                  <dd>CGV강남</dd>
-                  <dt>상영관</dt>
-                  <dd>4DX 1관</dd>
-                  <dt>날짜</dt>
+                  <dt>상영등급</dt>
+                  <dd>전체관람가</dd>
+                  <dt>상영극장</dt>
+                  <dd>강남점</dd>
+                  <dt>상영날짜</dt>
                   <dd>2025.12.12 금</dd>
                   <dt>상영시간</dt>
                   <dd>오전 10:25</dd>
-                  <dt>상영등급</dt>
-                  <dd>전체관람가</dd>
+                  <dt>인원</dt>
+                  <dd>일반 2인</dd>
                 </dl>
               </div>
               <input type="submit" value="예매하기" class="btn2">

@@ -407,8 +407,6 @@
         display: flex;
         gap: 10px;
 
-        li {}
-
         a {
           display: flex;
           flex-direction: column;
@@ -648,26 +646,30 @@
     }
 
     .rv-area {
+      max-width: 918px;
       width: pc-vw(918);
     }
 
     .movie-box {
+      overflow-y: auto;
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
       gap: 20px;
+      padding: 50px 18px;
       background: radial-gradient(#8A8A8A, #242424);
-
-      li {}
 
       input {
         display: none;
       }
 
-      label {}
+      label {
+        box-shadow: none;
+      }
 
       img {
-        border: 2px solid transparent;
+        border: 3px solid transparent;
+        border-radius: 8px;
         transition: 0.3s;
       }
 
@@ -682,19 +684,16 @@
 
     .rv-title {
       display: block;
+      padding: 14px 18px;
       background: $color-main-lg;
     }
 
-    .rv-title2 {
-      display: inline-block;
-      background: $color-main-bk;
-      color: $color-main-w;
-    }
-
-    .date-box {
-      .date {
+    .common-box {
+      >ul {
+        overflow-y: auto;
         display: flex;
-        gap: 16px;
+        gap: 26px;
+        padding: 20px 18px;
       }
 
       li {
@@ -705,7 +704,21 @@
         display: none;
       }
 
-      label {}
+      label {
+        padding: 16px 18px;
+        line-height: 1.4;
+      }
+
+      input:checked+label {
+        background: $color-main-lr;
+        color: $color-main-w;
+      }
+    }
+
+    .date-box {
+      label {
+        padding: 10px;
+      }
 
       span {
         display: block;
@@ -718,75 +731,32 @@
           color: #FF6767;
         }
       }
-
-      input:checked+label {
-        background: $color-main-lr;
-      }
-    }
-
-    .theater-box {
-      .theater {
-        display: flex;
-        gap: 26px;
-      }
-
-      li {}
-
-      input {
-        display: none;
-      }
-
-      label {}
-
-      input:checked+label {
-        background: $color-main-lr;
-      }
-    }
-
-    .hall-box {
-      .hall {
-        display: flex;
-        gap: 26px;
-      }
-
-      li {
-        text-align: center;
-      }
-
-      input {
-        display: none;
-      }
-
-      label {}
-
-      input:checked+label {
-        background: $color-main-lr;
-      }
-
-      span {
-        display: block;
-      }
     }
 
     .info-area {
+      min-width: calc(100% - 918px);
       width: calc(100% - pc-vw(918));
       background: $color-main-bk;
     }
 
     .info-box {
-      width: 226px;
+      width: 200px;
       margin: auto;
       padding: 80px 0;
 
       .img {
-        margin: auto;
-      }
+        margin: 0 auto 20px;
 
-      .txt {}
+        img {
+          width: 100%;
+        }
+      }
 
       span {
         display: block;
+        margin-bottom: 20px;
         color: $color-main-w;
+        font-size: $fs-basic-big;
         text-align: center;
       }
 
@@ -794,12 +764,23 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
+        margin-bottom: 20px;
         color: $color-main-w;
+      }
+
+      dt,
+      dd {
+        margin-bottom: 10px;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
       }
 
       dt {
         width: 60px;
+        color: $color-main-g;
       }
 
       dd {
@@ -880,9 +861,6 @@
   }
 }
 
-
-
-
 @media screen and (max-width: 1023px) and (min-width: 769px) {
   #preview .pre-section .inner {
     .card {
@@ -938,7 +916,6 @@
     }
   }
 }
-
 
 @media screen and (max-width: 768px) {
 
@@ -1215,39 +1192,110 @@
     }
   }
 
+  /* 영화 예매 */
+  #reservation {
+    .rv-con {
+      form {
+        display: block;
+      }
 
-  @media screen and (max-width: 620px) {
+      .rv-area {
+        max-width: none;
+        width: 100%;
+      }
 
-    /* 극장 > 전체극장 theater-search.php */
-    #theater-search {
-      .ts-con .bg {
-        top: 310px;
+      .movie-box {
+        gap: mo-rem(60);
+        padding: mo-rem(60) mo-rem(30);
+
+        label {
+          width: mo-vw(190);
+        }
+
+        img {
+          width: 100%;
+        }
+
+        p {
+          white-space: nowrap;
+        }
+      }
+
+      .rv-title {
+        padding: mo-rem(30) mo-rem(30);
+      }
+
+      .common-box {
+        >ul {
+          padding: mo-rem(30) mo-rem(30);
+        }
+      }
+
+      .info-area {
+        max-width: none;
+        width: 100%;
+      }
+
+      .info-box {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        gap: mo-rem(30);
+        width: 100%;
+        padding: mo-rem(60) mo-rem(30);
+
+        .img {
+          width: mo-vw(260);
+          margin-bottom: 0;
+        }
+
+        .txt {
+          width: calc(100% - mo-rem(30) - mo-vw(260));
+        }
+
+        dt {
+          width: mo-vw(120);
+        }
+
+        dd {
+          width: calc(100% - mo-vw(120));
+        }
       }
     }
   }
+}
 
-  @media screen and (max-width: 480px) {
+@media screen and (max-width: 620px) {
 
-    /* 장바구니 cart.php */
-    #cart {
-      .cart-con .movies li {
-        padding: 20px;
-      }
+  /* 극장 > 전체극장 theater-search.php */
+  #theater-search {
+    .ts-con .bg {
+      top: 310px;
+    }
+  }
+}
 
-      .cart-con .movies dt {
-        width: 70px;
-      }
+@media screen and (max-width: 480px) {
 
-      .cart-con .movies dd {
-        width: calc(100% - 70px);
-      }
+  /* 장바구니 cart.php */
+  #cart {
+    .cart-con .movies li {
+      padding: 20px;
     }
 
-    /* 극장 > 전체극장 theater-search.php */
-    #theater-search {
-      .ts-con .bg {
-        top: 230px;
-      }
+    .cart-con .movies dt {
+      width: 70px;
+    }
+
+    .cart-con .movies dd {
+      width: calc(100% - 70px);
+    }
+  }
+
+  /* 극장 > 전체극장 theater-search.php */
+  #theater-search {
+    .ts-con .bg {
+      top: 230px;
     }
   }
 }
