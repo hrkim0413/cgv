@@ -576,75 +576,37 @@ html {
   padding: 14px 18px;
   background: #F4F4F4;
 }
-#reservation .rv-con .rv-title2 {
-  display: inline-block;
-  margin: 0 18px;
-  padding: 14px 50px;
-  background: #121212;
-  border-radius: 53px;
-  color: #fff;
-}
-#reservation .rv-con .date-box > ul,
-#reservation .rv-con .theater-box > ul,
-#reservation .rv-con .hall-box > ul {
+#reservation .rv-con .common-box > ul {
   overflow-y: auto;
+  display: flex;
+  gap: 26px;
   padding: 20px 18px;
 }
-#reservation .rv-con .date-box label,
-#reservation .rv-con .theater-box label,
-#reservation .rv-con .hall-box label {
-  padding: 16px 18px;
-}
-#reservation .rv-con .date-box input:checked + label,
-#reservation .rv-con .theater-box input:checked + label,
-#reservation .rv-con .hall-box input:checked + label {
-  background: #FC5555;
-  color: #fff;
-}
-#reservation .rv-con .date-box .date {
-  display: flex;
-  gap: 16px;
-}
-#reservation .rv-con .date-box li {
+#reservation .rv-con .common-box li {
   text-align: center;
 }
-#reservation .rv-con .date-box input {
+#reservation .rv-con .common-box input {
   display: none;
+}
+#reservation .rv-con .common-box label {
+  padding: 16px 18px;
+  line-height: 1.4;
+}
+#reservation .rv-con .common-box input:checked + label {
+  background: #FC5555;
+  color: #fff;
 }
 #reservation .rv-con .date-box label {
   padding: 10px;
 }
 #reservation .rv-con .date-box span {
   display: block;
-  margin-bottom: 8px;
 }
 #reservation .rv-con .date-box span.blue {
   color: #6385C8;
 }
 #reservation .rv-con .date-box span.red {
   color: #FF6767;
-}
-#reservation .rv-con .theater-box .theater {
-  display: flex;
-  gap: 26px;
-}
-#reservation .rv-con .theater-box input {
-  display: none;
-}
-#reservation .rv-con .hall-box .hall {
-  display: flex;
-  gap: 26px;
-}
-#reservation .rv-con .hall-box li {
-  text-align: center;
-}
-#reservation .rv-con .hall-box input {
-  display: none;
-}
-#reservation .rv-con .hall-box span {
-  display: block;
-  margin-top: 2px;
-  font-size: 0.625rem;
 }
 #reservation .rv-con .info-area {
   min-width: calc(100% - 918px);
@@ -894,13 +856,7 @@ html {
   #reservation .rv-con .rv-title {
     padding: 0.9375rem 0.9375rem;
   }
-  #reservation .rv-con .rv-title2 {
-    margin: 0.625rem 0.9375rem 0;
-    padding: 0.625rem 0.9375rem;
-  }
-  #reservation .rv-con .date-box > ul,
-  #reservation .rv-con .theater-box > ul,
-  #reservation .rv-con .hall-box > ul {
+  #reservation .rv-con .common-box > ul {
     padding: 0.9375rem 0.9375rem;
   }
   #reservation .rv-con .info-area {

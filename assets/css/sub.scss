@@ -407,8 +407,6 @@
         display: flex;
         gap: 10px;
 
-        li {}
-
         a {
           display: flex;
           flex-direction: column;
@@ -624,25 +622,25 @@
       background: $color-main-lg;
     }
 
-    .rv-title2 {
-      display: inline-block;
-      margin: 0 18px;
-      padding: 14px 50px;
-      background: $color-main-bk;
-      border-radius: 53px;
-      color: $color-main-w;
-    }
-
-    .date-box,
-    .theater-box,
-    .hall-box {
+    .common-box {
       >ul {
         overflow-y: auto;
+        display: flex;
+        gap: 26px;
         padding: 20px 18px;
+      }
+
+      li {
+        text-align: center;
+      }
+
+      input {
+        display: none;
       }
 
       label {
         padding: 16px 18px;
+        line-height: 1.4;
       }
 
       input:checked+label {
@@ -652,26 +650,12 @@
     }
 
     .date-box {
-      .date {
-        display: flex;
-        gap: 16px;
-      }
-
-      li {
-        text-align: center;
-      }
-
-      input {
-        display: none;
-      }
-
       label {
         padding: 10px;
       }
 
       span {
         display: block;
-        margin-bottom: 8px;
 
         &.blue {
           color: #6385C8;
@@ -680,38 +664,6 @@
         &.red {
           color: #FF6767;
         }
-      }
-    }
-
-    .theater-box {
-      .theater {
-        display: flex;
-        gap: 26px;
-      }
-
-      input {
-        display: none;
-      }
-    }
-
-    .hall-box {
-      .hall {
-        display: flex;
-        gap: 26px;
-      }
-
-      li {
-        text-align: center;
-      }
-
-      input {
-        display: none;
-      }
-
-      span {
-        display: block;
-        margin-top: 2px;
-        font-size: 0.625rem;
       }
     }
 
@@ -1013,14 +965,7 @@
         padding: mo-rem(30) mo-rem(30);
       }
 
-      .rv-title2 {
-        margin: mo-rem(20) mo-rem(30) 0;
-        padding: mo-rem(20) mo-rem(30);
-      }
-
-      .date-box,
-      .theater-box,
-      .hall-box {
+      .common-box {
         >ul {
           padding: mo-rem(30) mo-rem(30);
         }
