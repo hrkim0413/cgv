@@ -42,50 +42,50 @@
               <ul class="pre_con">
                 <li class="card">
                   <a href="#" title="시사회 페이지">
-                    <figure>
-                      <img src="../assets/images/sub/greeting1.jpg" alt="시사회 이미지">
-                      <figcaption>
-                        <div class="txt-wrap">
-                          <h3 class="title">시사회</h3>
-                          <h4>Hallan</h4>
-                          <p>11월 우리가 잊지 말아야할<br>이야기가 온다!</p>
-                        </div>
-                        <span class="type">개봉주 무대인사</span>
-                        <span class="day">2025.11.29 ~ 2025.11.29</span>
-                      </figcaption>
-                    </figure>
+
+                    <img src="../assets/images/sub/greeting1.jpg" alt="시사회 이미지">
+                    <div class="txt-wrap">
+                      <div class="txt">
+                        <h3 class="title">시사회</h3>
+                        <h4>Hallan</h4>
+                        <p>11월 우리가 잊지 말아야할<br>이야기가 온다!</p>
+                      </div>
+                      <span class="type">개봉주 무대인사</span>
+                      <span class="day">2025.11.29 ~ 2025.11.29</span>
+                    </div>
+
                   </a>
                 </li>
                 <li class="card">
                   <a href="#" title="시사회 페이지">
-                    <figure>
-                      <img src="../assets/images/sub/greeting1.jpg" alt="시사회 이미지">
-                      <figcaption>
-                        <div class="txt-wrap">
-                          <h3 class="title">한란</h3>
-                          <h4>Hallan</h4>
-                          <p>11월 우리가 잊지 말아야할<br>이야기가 온다!</p>
-                        </div>
-                        <span class="type">개봉주 무대인사</span>
-                        <span class="day">2025.11.29 ~ 2025.11.29</span>
-                      </figcaption>
-                    </figure>
+
+                    <img src="../assets/images/sub/greeting1.jpg" alt="시사회 이미지">
+                    <div class="txt-wrap">
+                      <div class="txt">
+                        <h3 class="title">한란</h3>
+                        <h4>Hallan</h4>
+                        <p>11월 우리가 잊지 말아야할<br>이야기가 온다!</p>
+                      </div>
+                      <span class="type">개봉주 무대인사</span>
+                      <span class="day">2025.11.29 ~ 2025.11.29</span>
+                    </div>
+
                   </a>
                 </li>
                 <li class="card">
                   <a href="#" title="시사회 페이지">
-                    <figure>
-                      <img src="../assets/images/sub/greeting1.jpg" alt="시사회 이미지">
-                      <figcaption>
-                        <div class="txt-wrap">
-                          <h3 class="title">한란</h3>
-                          <h4>Hallan</h4>
-                          <p>11월 우리가 잊지 말아야할<br>이야기가 온다!</p>
-                        </div>
-                        <span class="type">개봉주 무대인사</span>
-                        <span class="day">2025.11.29 ~ 2025.11.29</span>
-                      </figcaption>
-                    </figure>
+
+                    <img src="../assets/images/sub/greeting1.jpg" alt="시사회 이미지">
+                    <div class="txt-wrap">
+                      <div class="txt">
+                        <h3 class="title">한란</h3>
+                        <h4>Hallan</h4>
+                        <p>11월 우리가 잊지 말아야할<br>이야기가 온다!</p>
+                      </div>
+                      <span class="type">개봉주 무대인사</span>
+                      <span class="day">2025.11.29 ~ 2025.11.29</span>
+                    </div>
+
                   </a>
                 </li>
               </ul>
@@ -96,50 +96,50 @@
               <ul class="greet_con">
                 <li class="card">
                   <a href="#" title="시사회 페이지">
-                    <figure>
-                      <img src="../assets/images/sub/greeting1.jpg" alt="시사회 이미지">
-                      <figcaption>
-                        <div class="txt-wrap">
-                          <h3 class="title">무대인사</h3>
-                          <h4>Hallan</h4>
-                          <p>11월 우리가 잊지 말아야할<br>이야기가 온다!</p>
-                        </div>
-                        <span class="type">개봉주 무대인사</span>
-                        <span class="day">2025.11.29 ~ 2025.11.29</span>
-                      </figcaption>
-                    </figure>
+
+                    <img src="../assets/images/sub/greeting1.jpg" alt="시사회 이미지">
+                    <div class="txt-wrap">
+                      <div class="txt">
+                        <h3 class="title">무대인사</h3>
+                        <h4>Hallan</h4>
+                        <p>11월 우리가 잊지 말아야할<br>이야기가 온다!</p>
+                      </div>
+                      <span class="type">개봉주 무대인사</span>
+                      <span class="day">2025.11.29 ~ 2025.11.29</span>
+                    </div>
+
                   </a>
                 </li>
                 <li class="card">
                   <a href="#" title="시사회 페이지">
-                    <figure>
-                      <img src="../assets/images/sub/greeting1.jpg" alt="시사회 이미지">
-                      <figcaption>
-                        <div class="txt-wrap">
-                          <h3 class="title">한란</h3>
-                          <h4>Hallan</h4>
-                          <p>11월 우리가 잊지 말아야할<br>이야기가 온다!</p>
-                        </div>
-                        <span class="type">개봉주 무대인사</span>
-                        <span class="day">2025.11.29 ~ 2025.11.29</span>
-                      </figcaption>
-                    </figure>
+
+                    <img src="../assets/images/sub/greeting1.jpg" alt="시사회 이미지">
+                    <div class="txt-wrap">
+                      <div class="txt">
+                        <h3 class="title">한란</h3>
+                        <h4>Hallan</h4>
+                        <p>11월 우리가 잊지 말아야할<br>이야기가 온다!</p>
+                      </div>
+                      <span class="type">개봉주 무대인사</span>
+                      <span class="day">2025.11.29 ~ 2025.11.29</span>
+                    </div>
+
                   </a>
                 </li>
                 <li class="card">
                   <a href="#" title="시사회 페이지">
-                    <figure>
-                      <img src="../assets/images/sub/greeting1.jpg" alt="시사회 이미지">
-                      <figcaption>
-                        <div class="txt-wrap">
-                          <h3 class="title">한란</h3>
-                          <h4>Hallan</h4>
-                          <p>11월 우리가 잊지 말아야할<br>이야기가 온다!</p>
-                        </div>
-                        <span class="type">개봉주 무대인사</span>
-                        <span class="day">2025.11.29 ~ 2025.11.29</span>
-                      </figcaption>
-                    </figure>
+
+                    <img src="../assets/images/sub/greeting1.jpg" alt="시사회 이미지">
+                    <div class="txt-wrap">
+                      <div class="txt">
+                        <h3 class="title">한란</h3>
+                        <h4>Hallan</h4>
+                        <p>11월 우리가 잊지 말아야할<br>이야기가 온다!</p>
+                      </div>
+                      <span class="type">개봉주 무대인사</span>
+                      <span class="day">2025.11.29 ~ 2025.11.29</span>
+                    </div>
+
                   </a>
                 </li>
               </ul>
