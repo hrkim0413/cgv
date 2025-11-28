@@ -337,7 +337,7 @@ html {
 }
 #theater-search .ts-con .bg {
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - 88px);
 }
 #theater-search .ts-con .bg img {
   width: 100%;
@@ -349,7 +349,7 @@ html {
   position: absolute;
   left: 0;
   top: 0;
-  height: 100vh;
+  height: calc(100vh - 88px);
   background: #fff;
 }
 #theater-search .ts-con .title-box {
@@ -386,7 +386,7 @@ html {
 }
 #theater-search .ts-con .list-box {
   overflow-y: scroll;
-  height: calc(100vh - 332px);
+  height: calc(100vh - 88px - 334px);
 }
 #theater-search .ts-con .list-box .list-title {
   padding: 20px 30px;
@@ -422,7 +422,7 @@ html {
   gap: 10px;
 }
 
-/*시사회 & 전시회*/
+/* 시사회 & 전시회 */
 #preview {
   background-color: #242424;
 }
@@ -525,6 +525,144 @@ html {
   transform: rotate(90deg);
   right: -80px;
   top: 140px;
+}
+
+/* 영화 예매 */
+#reservation .rv-con .main-title {
+  text-align: center;
+}
+#reservation .rv-con form {
+  display: flex;
+  border: 1px solid #121212;
+}
+#reservation .rv-con form label {
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  transition: 0.3s;
+}
+#reservation .rv-con .rv-area {
+  width: 65.5714285714vw;
+}
+#reservation .rv-con .movie-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background: radial-gradient(#8A8A8A, #242424);
+}
+#reservation .rv-con .movie-box input {
+  display: none;
+}
+#reservation .rv-con .movie-box img {
+  border: 2px solid transparent;
+  transition: 0.3s;
+}
+#reservation .rv-con .movie-box p {
+  color: #fff;
+}
+#reservation .rv-con .movie-box input:checked + label img {
+  border-color: #ED0E02;
+}
+#reservation .rv-con .rv-title {
+  display: block;
+  background: #F4F4F4;
+}
+#reservation .rv-con .rv-title2 {
+  display: inline-block;
+  background: #121212;
+  color: #fff;
+}
+#reservation .rv-con .date-box .date {
+  display: flex;
+  gap: 16px;
+}
+#reservation .rv-con .date-box li {
+  text-align: center;
+}
+#reservation .rv-con .date-box input {
+  display: none;
+}
+#reservation .rv-con .date-box span {
+  display: block;
+}
+#reservation .rv-con .date-box span.blue {
+  color: #6385C8;
+}
+#reservation .rv-con .date-box span.red {
+  color: #FF6767;
+}
+#reservation .rv-con .date-box input:checked + label {
+  background: #FC5555;
+}
+#reservation .rv-con .theater-box .theater {
+  display: flex;
+  gap: 26px;
+}
+#reservation .rv-con .theater-box input {
+  display: none;
+}
+#reservation .rv-con .theater-box input:checked + label {
+  background: #FC5555;
+}
+#reservation .rv-con .hall-box .hall {
+  display: flex;
+  gap: 26px;
+}
+#reservation .rv-con .hall-box li {
+  text-align: center;
+}
+#reservation .rv-con .hall-box input {
+  display: none;
+}
+#reservation .rv-con .hall-box input:checked + label {
+  background: #FC5555;
+}
+#reservation .rv-con .hall-box span {
+  display: block;
+}
+#reservation .rv-con .info-area {
+  width: calc(100% - 65.5714285714vw);
+  background: #121212;
+}
+#reservation .rv-con .info-box {
+  width: 226px;
+  margin: auto;
+  padding: 80px 0;
+}
+#reservation .rv-con .info-box .img {
+  margin: auto;
+}
+#reservation .rv-con .info-box span {
+  display: block;
+  color: #fff;
+  text-align: center;
+}
+#reservation .rv-con .info-box dl {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+#reservation .rv-con .info-box dt {
+  width: 60px;
+}
+#reservation .rv-con .info-box dd {
+  width: calc(100% - 60px);
+  text-align: right;
+}
+#reservation .rv-con .info-box input {
+  width: 100%;
+  margin: auto;
+  border: none;
+  font-family: "NanumSquareRound", "Nanum Gothic", sans-serif;
+  font-size: 1rem;
+  transition: 0.3s;
+  cursor: pointer;
+}
+#reservation .rv-con .info-box input:hover {
+  background: #ED0E02;
 }
 
 @media screen and (max-width: 768px) {

@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CGV</title>
+  <title>CGV | 이벤트/혜택 | 시사회/무대인사</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
   <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
@@ -20,7 +20,7 @@
 
 <body>
   <!-- header -->
-  <?php include('../assets/inc/header.php');?>
+  <?php include("../assets/inc/header.php");?>
 
   <!-- main -->
   <main id="preview">
@@ -150,8 +150,9 @@
       </div>
     </section>
   </main>
+
   <!-- footer -->
-  <?php include('../assets/inc/footer.php');?>
+  <?php include("../assets/inc/footer.php");?>
 
   <!-- 스와이퍼 js -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
