@@ -40,7 +40,7 @@
             <!-- 시사회 목록 -->
             <div class="previewTab">
               <ul class="pre_con">
-                <li class="card">
+                <li class="card card-black">
                   <a href="#" title="시사회 페이지">
 
                     <img src="../assets/images/sub/greeting1.jpg" alt="시사회 이미지">
@@ -56,7 +56,7 @@
 
                   </a>
                 </li>
-                <li class="card">
+                <li class="card card-white">
                   <a href="#" title="시사회 페이지">
 
                     <img src="../assets/images/sub/greeting1.jpg" alt="시사회 이미지">
@@ -72,7 +72,7 @@
 
                   </a>
                 </li>
-                <li class="card">
+                <li class="card card-black">
                   <a href="#" title="시사회 페이지">
 
                     <img src="../assets/images/sub/greeting1.jpg" alt="시사회 이미지">
@@ -94,7 +94,7 @@
             <!-- 무대인사 목록 -->
             <div class="greetTab">
               <ul class="greet_con">
-                <li class="card">
+                <li class="card card-black">
                   <a href="#" title="시사회 페이지">
 
                     <img src="../assets/images/sub/greeting1.jpg" alt="시사회 이미지">
@@ -110,7 +110,7 @@
 
                   </a>
                 </li>
-                <li class="card">
+                <li class="card card-white">
                   <a href="#" title="시사회 페이지">
 
                     <img src="../assets/images/sub/greeting1.jpg" alt="시사회 이미지">
@@ -126,7 +126,7 @@
 
                   </a>
                 </li>
-                <li class="card">
+                <li class="card card-black">
                   <a href="#" title="시사회 페이지">
 
                     <img src="../assets/images/sub/greeting1.jpg" alt="시사회 이미지">

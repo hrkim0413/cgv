@@ -429,23 +429,30 @@
   .pre-section {
     .inner {
       //배경이미지 넣기
-      background: url('../images/sub/previewbg.png') no-repeat center;
+      background: url('../images/sub/previewbg.png') no-repeat center top / cover;
 
       .box {
         //배경가운데로
-        max-width: 1030px;
-        width: pc-vw(1030);
+        max-width: 1050px;
+        width: pc-vw(1050);
         position: relative;
         margin: 0 auto;
 
         >h2 {
           //시사회무대인사
-          border-bottom: 1px solid $color-main-dg;
+          border-bottom: 3px solid $color-main-dg;
+          padding: 0px 20px;
+          line-height: 60px;
+          margin-bottom: 6px;
         }
 
         >p {
           //시사회도 CGV에서~
-          border-bottom: 1px solid $color-main-dg;
+          border-bottom: 3px solid $color-main-dg;
+          padding: 0 22px;
+          font-size: 20px;
+          line-height: 30px;
+          font-weight: bold;
         }
       }
 
@@ -487,18 +494,17 @@
 
       //카드형식
       .card {
-        background-color: $color-main-dg;
         border-radius: 15px;
         overflow: hidden;
         box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
-
-
         max-width: 570px;
         width: pc-vw(570);
-        height: 350px;
+        max-height: 350px;
+        height: pc-vw(350);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
 
         a {
+          display: block;
           width: 100%;
           height: 100%;
         }
@@ -514,11 +520,10 @@
         .txt-wrap {
           position: relative;
           display: block;
-          color: $color-main-w;
           max-width: 300px;
           width: pc-vw(300);
-          height: 260px;
-          transform: translate(260px, -340px);
+          max-height: 260px;
+          height: pc-vw(260);
 
           .txt,
           span,
@@ -527,32 +532,93 @@
           }
 
           .txt {
-            top: 80px;
+            top: 100px;
+            width: 240px;
+            height: 160px;
 
             .title {
-              font-size: 60px;
+              font-size: 3.75rem;
               font-weight: bold;
-              margin-bottom: 20px;
+              margin-bottom: 10px;
             }
 
             h4 {
               text-indent: 16px;
+              margin-bottom: 10px;
+              font-size: 20px;
+              padding-right: 10px;
             }
-
-            p {
-              width: 200px;
-              left: 16px;
-            }
-          }
-
-          .type {
-            right: 0px;
           }
 
           .day {
             transform: rotate(90deg);
-            right: -80px;
+          }
+        }
+
+      }
+
+      .card-black {
+        background-color: $color-main-dg;
+
+        .txt-wrap {
+          color: $color-main-w;
+          transform: translate(260px, -340px);
+
+          .txt {
+            right: 110px;
+            text-align: right;
+
+            p,
+            h4 {
+              padding-right: 10px;
+            }
+          }
+
+          .type,
+          p {
+            right: 0px;
+          }
+
+          .day {
+            right: -70px;
             top: 140px;
+            color: $color-main-lg;
+
+          }
+        }
+
+      }
+
+      .card-white {
+        background-color: $color-main-w;
+        position: relative;
+
+        img {
+          position: absolute;
+          right: 0px;
+        }
+
+        .txt-wrap {
+          color: $color-main-bk;
+          transform: translate(100px, 0px);
+
+          .txt {
+            text-align: left;
+
+            p {
+              padding-left: 16px;
+            }
+          }
+
+          .type {
+            left: -82px;
+            top: 14px;
+          }
+
+          .day {
+            left: -170px;
+            top: 166px;
+            color: $color-main-g;
 
           }
         }
@@ -758,9 +824,207 @@
   }
 }
 
-@media screen and (max-width: 1023px) and (min-width: 769px) {}
+@media screen and (max-width: 1399px) and (min-width: 1024px) {
+  #preview .pre-section .inner {
+    .card {
+      img {
+        margin: pc-vw(25);
+      }
+
+      .txt-wrap {
+        font-size: pc-vw(16);
+
+        .txt {
+          top: pc-vw(80);
+
+          .title {
+            font-size: pc-vw(60);
+          }
+        }
+      }
+    }
+
+    .card-black {
+
+      .txt-wrap {
+        transform: translate(pc-vw(260), -(pc-vw(340)));
+
+        .day {
+          top: pc-vw(140);
+          right: -(pc-vw(70));
+        }
+      }
+    }
+
+
+    .card-white {
+
+      .txt-wrap {
+        transform: translate(pc-vw(100), pc-vw(0));
+
+        .txt p {
+          padding-left: pc-vw(16);
+        }
+
+        .type {
+          left: -(pc-vw(80));
+          top: pc-vw(14);
+        }
+
+        .day {
+          top: pc-vw(170);
+          left: -(pc-vw(166));
+        }
+      }
+    }
+  }
+}
+
+
+
+
+@media screen and (max-width: 1023px) and (min-width: 769px) {
+  #preview .pre-section .inner {
+    .card {
+      img {
+        margin: pc-vw(25);
+      }
+
+      .txt-wrap {
+        font-size: pc-vw(16);
+
+        .txt {
+          top: pc-vw(80);
+
+          .title {
+            font-size: pc-vw(60);
+          }
+        }
+      }
+    }
+
+    .card-black {
+
+      .txt-wrap {
+        transform: translate(pc-vw(260), -(pc-vw(340)));
+
+        .day {
+          top: pc-vw(140);
+          right: -(pc-vw(70));
+        }
+      }
+    }
+
+
+    .card-white {
+
+      .txt-wrap {
+        transform: translate(pc-vw(100), pc-vw(0));
+
+        .txt p {
+          padding-left: pc-vw(16);
+        }
+
+        .type {
+          left: -(pc-vw(80));
+          top: pc-vw(14);
+        }
+
+        .day {
+          top: pc-vw(170);
+          left: -(pc-vw(166));
+        }
+      }
+    }
+  }
+}
+
 
 @media screen and (max-width: 768px) {
+
+  /*시사회*/
+
+
+  #preview .pre-section .inner {
+    background: url('../images/sub/previewbg_m.png') no-repeat center top / cover;
+    ;
+
+    .btn {
+      border-radius: 30px;
+    }
+
+    .card {
+      max-width: 570px;
+      width: mo-vw(570);
+      max-height: 350px;
+      height: mo-vw(350);
+
+      img {
+        max-width: 300px;
+        width: mo-vw(300);
+        margin: mo-vw(25);
+      }
+
+      .txt-wrap {
+        font-size: mo-vw(20);
+
+        .txt {
+          p {
+            width: mo-vw(230);
+          }
+
+          .title {
+            font-size: mo-vw(60);
+          }
+        }
+      }
+    }
+
+
+    .card-black {
+
+      .txt-wrap {
+        transform: translate(mo-vw(375), -(mo-vw(340)));
+
+        .txt {
+          top: mo-vw(80);
+          right: mo-vw(80);
+        }
+
+        .day {
+          top: mo-vw(150);
+          right: -(mo-vw(106));
+        }
+      }
+    }
+
+
+    .card-white {
+
+      .txt-wrap {
+        transform: translate(mo-vw(100), -(mo-vw(40)));
+
+        .txt {
+          top: mo-vw(80);
+          right: mo-vw(80);
+
+          p {
+            padding-left: mo-vw(16);
+          }
+        }
+
+        .type {
+          left: -(mo-vw(80));
+          top: mo-vw(64);
+        }
+
+        .day {
+          top: mo-vw(220);
+          left: -(mo-vw(190));
+        }
+      }
+    }
+  }
 
   /* 장바구니 cart.php */
   #cart {
@@ -950,39 +1214,40 @@
       }
     }
   }
-}
 
-@media screen and (max-width: 620px) {
 
-  /* 극장 > 전체극장 theater-search.php */
-  #theater-search {
-    .ts-con .bg {
-      top: 310px;
-    }
-  }
-}
+  @media screen and (max-width: 620px) {
 
-@media screen and (max-width: 480px) {
-
-  /* 장바구니 cart.php */
-  #cart {
-    .cart-con .movies li {
-      padding: 20px;
-    }
-
-    .cart-con .movies dt {
-      width: 70px;
-    }
-
-    .cart-con .movies dd {
-      width: calc(100% - 70px);
+    /* 극장 > 전체극장 theater-search.php */
+    #theater-search {
+      .ts-con .bg {
+        top: 310px;
+      }
     }
   }
 
-  /* 극장 > 전체극장 theater-search.php */
-  #theater-search {
-    .ts-con .bg {
-      top: 230px;
+  @media screen and (max-width: 480px) {
+
+    /* 장바구니 cart.php */
+    #cart {
+      .cart-con .movies li {
+        padding: 20px;
+      }
+
+      .cart-con .movies dt {
+        width: 70px;
+      }
+
+      .cart-con .movies dd {
+        width: calc(100% - 70px);
+      }
+    }
+
+    /* 극장 > 전체극장 theater-search.php */
+    #theater-search {
+      .ts-con .bg {
+        top: 230px;
+      }
     }
   }
 }
