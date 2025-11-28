@@ -587,11 +587,12 @@
     }
 
     .movie-box {
+      overflow-y: auto;
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
       gap: 20px;
-      padding: 50px 0;
+      padding: 50px 18px;
       background: radial-gradient(#8A8A8A, #242424);
 
       input {
@@ -625,7 +626,10 @@
 
     .rv-title2 {
       display: inline-block;
+      margin: 0 18px;
+      padding: 14px 50px;
       background: $color-main-bk;
+      border-radius: 53px;
       color: $color-main-w;
     }
 
@@ -633,10 +637,18 @@
     .theater-box,
     .hall-box {
       >ul {
+        overflow-y: auto;
         padding: 20px 18px;
       }
 
-      li {}
+      label {
+        padding: 16px 18px;
+      }
+
+      input:checked+label {
+        background: $color-main-lr;
+        color: $color-main-w;
+      }
     }
 
     .date-box {
@@ -653,10 +665,13 @@
         display: none;
       }
 
-      label {}
+      label {
+        padding: 10px;
+      }
 
       span {
         display: block;
+        margin-bottom: 8px;
 
         &.blue {
           color: #6385C8;
@@ -666,10 +681,6 @@
           color: #FF6767;
         }
       }
-
-      input:checked+label {
-        background: $color-main-lr;
-      }
     }
 
     .theater-box {
@@ -678,16 +689,8 @@
         gap: 26px;
       }
 
-      li {}
-
       input {
         display: none;
-      }
-
-      label {}
-
-      input:checked+label {
-        background: $color-main-lr;
       }
     }
 
@@ -705,14 +708,10 @@
         display: none;
       }
 
-      label {}
-
-      input:checked+label {
-        background: $color-main-lr;
-      }
-
       span {
         display: block;
+        margin-top: 2px;
+        font-size: 0.625rem;
       }
     }
 
@@ -723,19 +722,23 @@
     }
 
     .info-box {
-      width: 226px;
+      width: 200px;
       margin: auto;
       padding: 80px 0;
 
       .img {
-        margin: auto;
-      }
+        margin: 0 auto 20px;
 
-      .txt {}
+        img {
+          width: 100%;
+        }
+      }
 
       span {
         display: block;
+        margin-bottom: 20px;
         color: $color-main-w;
+        font-size: $fs-basic-big;
         text-align: center;
       }
 
@@ -743,12 +746,23 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
+        margin-bottom: 20px;
         color: $color-main-w;
+      }
+
+      dt,
+      dd {
+        margin-bottom: 10px;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
       }
 
       dt {
         width: 60px;
+        color: $color-main-g;
       }
 
       dd {
@@ -961,6 +975,85 @@
           img {
             width: 100%;
           }
+        }
+      }
+    }
+  }
+
+  /* 영화 예매 */
+  #reservation {
+    .rv-con {
+      form {
+        display: block;
+      }
+
+      .rv-area {
+        max-width: none;
+        width: 100%;
+      }
+
+      .movie-box {
+        gap: mo-rem(60);
+        padding: mo-rem(60) mo-rem(30);
+
+        label {
+          width: mo-vw(190);
+        }
+
+        img {
+          width: 100%;
+        }
+
+        p {
+          white-space: nowrap;
+        }
+      }
+
+      .rv-title {
+        padding: mo-rem(30) mo-rem(30);
+      }
+
+      .rv-title2 {
+        margin: mo-rem(20) mo-rem(30) 0;
+        padding: mo-rem(20) mo-rem(30);
+      }
+
+      .date-box,
+      .theater-box,
+      .hall-box {
+        >ul {
+          padding: mo-rem(30) mo-rem(30);
+        }
+      }
+
+      .info-area {
+        max-width: none;
+        width: 100%;
+      }
+
+      .info-box {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        gap: mo-rem(30);
+        width: 100%;
+        padding: mo-rem(60) mo-rem(30);
+
+        .img {
+          width: mo-vw(260);
+          margin-bottom: 0;
+        }
+
+        .txt {
+          width: calc(100% - mo-rem(30) - mo-vw(260));
+        }
+
+        dt {
+          width: mo-vw(120);
+        }
+
+        dd {
+          width: calc(100% - mo-vw(120));
         }
       }
     }

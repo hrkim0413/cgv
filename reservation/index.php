@@ -31,7 +31,7 @@
           <div class="rv-area">
             <ul class="movie-box">
               <li>
-                <input type="radio" name="rd1" id="m01" required>
+                <input type="radio" name="rd1" id="m01">
                 <label for="m01">
                   <img src="../assets/images/sub/rv-movie01.png" alt="주토피아">
                   <p>주토피아</p>
@@ -39,7 +39,7 @@
               </li>
 
               <li>
-                <input type="radio" name="rd1" id="m02" required>
+                <input type="radio" name="rd1" id="m02">
                 <label for="m02">
                   <img src="../assets/images/sub/rv-movie01.png" alt="위키드 포굿">
                   <p>위키드 포굿</p>
@@ -47,7 +47,7 @@
               </li>
 
               <li>
-                <input type="radio" name="rd1" id="m03" required>
+                <input type="radio" name="rd1" id="m03">
                 <label for="m03">
                   <img src="../assets/images/sub/rv-movie01.png" alt="나우 유 씨 미3">
                   <p>나우 유 씨 미3</p>
@@ -55,7 +55,7 @@
               </li>
 
               <li>
-                <input type="radio" name="rd1" id="m04" required>
+                <input type="radio" name="rd1" id="m04">
                 <label for="m04">
                   <img src="../assets/images/sub/rv-movie01.png" alt="정보원">
                   <p>정보원</p>
@@ -63,7 +63,7 @@
               </li>
 
               <li>
-                <input type="radio" name="rd1" id="m05" required>
+                <input type="radio" name="rd1" id="m05">
                 <label for="m05">
                   <img src="../assets/images/sub/rv-movie01.png" alt="국보">
                   <p>국보</p>
