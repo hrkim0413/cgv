@@ -539,6 +539,7 @@ html {
   transition: 0.3s;
 }
 #reservation .rv-con .rv-area {
+  max-width: 918px;
   width: 65.5714285714vw;
 }
 #reservation .rv-con .movie-box {
@@ -546,13 +547,18 @@ html {
   justify-content: center;
   align-items: center;
   gap: 20px;
+  padding: 50px 0;
   background: radial-gradient(#8A8A8A, #242424);
 }
 #reservation .rv-con .movie-box input {
   display: none;
 }
+#reservation .rv-con .movie-box label {
+  box-shadow: none;
+}
 #reservation .rv-con .movie-box img {
-  border: 2px solid transparent;
+  border: 3px solid transparent;
+  border-radius: 8px;
   transition: 0.3s;
 }
 #reservation .rv-con .movie-box p {
@@ -563,12 +569,18 @@ html {
 }
 #reservation .rv-con .rv-title {
   display: block;
+  padding: 14px 18px;
   background: #F4F4F4;
 }
 #reservation .rv-con .rv-title2 {
   display: inline-block;
   background: #121212;
   color: #fff;
+}
+#reservation .rv-con .date-box > ul,
+#reservation .rv-con .theater-box > ul,
+#reservation .rv-con .hall-box > ul {
+  padding: 20px 18px;
 }
 #reservation .rv-con .date-box .date {
   display: flex;
@@ -619,6 +631,7 @@ html {
   display: block;
 }
 #reservation .rv-con .info-area {
+  min-width: calc(100% - 918px);
   width: calc(100% - 65.5714285714vw);
   background: #121212;
 }

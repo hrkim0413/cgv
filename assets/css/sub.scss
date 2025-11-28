@@ -577,6 +577,7 @@
     }
 
     .rv-area {
+      max-width: 918px;
       width: pc-vw(918);
     }
 
@@ -585,18 +586,20 @@
       justify-content: center;
       align-items: center;
       gap: 20px;
+      padding: 50px 0;
       background: radial-gradient(#8A8A8A, #242424);
-
-      li {}
 
       input {
         display: none;
       }
 
-      label {}
+      label {
+        box-shadow: none;
+      }
 
       img {
-        border: 2px solid transparent;
+        border: 3px solid transparent;
+        border-radius: 8px;
         transition: 0.3s;
       }
 
@@ -611,6 +614,7 @@
 
     .rv-title {
       display: block;
+      padding: 14px 18px;
       background: $color-main-lg;
     }
 
@@ -618,6 +622,16 @@
       display: inline-block;
       background: $color-main-bk;
       color: $color-main-w;
+    }
+
+    .date-box,
+    .theater-box,
+    .hall-box {
+      >ul {
+        padding: 20px 18px;
+      }
+
+      li {}
     }
 
     .date-box {
@@ -698,6 +712,7 @@
     }
 
     .info-area {
+      min-width: calc(100% - 918px);
       width: calc(100% - pc-vw(918));
       background: $color-main-bk;
     }
